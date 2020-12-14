@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/*header*/
+.utilWrap{border-bottom: 1px solid #ccc; margin-bottom: 10px;}
+.util{width: 980px; margin: 0 auto;}
+.utilMenu{margin-left: auto; width: 280px;} /*가로길이가 있어야함!*/
+.utilMenu li{float: left; position: relative;}
+.utilMenu li:after{content: "";display: block; width: 1px; height: 10px; background-color: #f00; position: absolute;right: 0; top: 10px;}
+/*.utilMenu li:last-child:after{content: "";display: none;}*/
+.utilMenu li:first-child:before{content: "";display: block;width: 1px;height: 10px;background-color: #00f; position: absolute;left: 0;top: 10px;}
+.utilMenu a{display: block; padding: 0 10px; line-height: 30px;}
+
+#header h1{text-align: center; margin-bottom: 15px;}
+
+.gnbWrap{background-color: #1d5da4;}
+.gnbMenu{width: 980px; margin: 0 auto;}
+.gnbMenu li{float: left; width: 163.333px; box-sizing: border-box;border-right: 1px solid white;}
+.gnbMenu li:first-child{border-left: 1px solid white;}
+.gnbMenu a{display: block; line-height: 45px; text-align: center; color: white; font-weight: bold;}
+/*.gnbMenu a:hover{background-color: skyblue; color: #1d5da4;}*/ /*방법1*/
+.gnbMenu li:hover{background-color: skyblue;} /*방법2*/
+.gnbMenu li:hover a{color: #1d5da4;}
+
+/*visual Wrap*/
+.visualWrap{height: 400px; overflow: hidden;/*background-color: #223a6a;
+			background-image: url(../images/main_bg01.jpg);
+			background-repeat: no-repeat;
+			background-position: center;*/
+			background: #223a6a url(../images/main_bg01.jpg) no-repeat center;} /*repeat 여러개반복*/
+.visual{width: 980px; margin: 0 auto; position: relative;}
+.visualimg1{position: absolute;left: 10px;top: 70px;}
+.visualimg2{position: absolute;right: 0; top: 50px;}
+
+/*banner section*/
+.section{background-color: #eee;}
+.banner{width: 980px; margin: 0 auto;}
+.banner li{float: left; width: 196px; height: 196px;}
+.banner li:nth-child(1){background-color: #7c99b9;}
+.banner li:nth-child(2){background-color: #4f74a1;}
+.banner li:nth-child(3){background-color: #4b8ce0;}
+.banner li:nth-child(4){background-color: #3db5f2;}
+.banner li:nth-child(5){background-color: #95c8ff;}
+.banner a{display: block; height: 196px; text-align: center; 
+		color: white; padding: 15px;}
+.banner p{font-size: 12px;}
+.banner img{margin: 0 auto;}
+
+/*content section*/
+.contWrapOne{width: 980px; margin: 0 auto;}
+.contWrapOne .content li{float: left; width: 310px; margin-right: 25px; cursor: pointer;}
+.contWrapOne .content li:last-child{margin-right: 0;}
+.contWrapOne .body{border: 1px solid #ccc;
+	border-top: 0px none;}
+.contWrapOne .body p{overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;}
+
+/*content section2*/
+.contWrapTwo{width: 980px; margin: 0 auto;}
+.contWrapTwo .content li{float: left; width: 310px; margin-right: 25px;
+						border: 1px solid #ddd; padding: 20px; position: relative;
+						overflow: hidden;}
+.contWrapTwo .content li:last-child{margin-right: 0;}
+.contWrapTwo .content li:nth-child(1) img{
+	position: absolute; top: 0; right: -30px;}
+	/*background-image: url(../images/content_icon01.png);
+	background-repeat: no-repeat;
+	background-position: 140px 10px;}*/
+
+.contWrapTwo .content li:nth-child(2){
+	background-image: url(../images/content_icon02.png);
+	background-repeat: no-repeat;
+	background-position: 130px 0px;}
+.contWrapTwo .content li:nth-child(3){
+	background-image: url(../images/content_icon03.png);
+	background-repeat: no-repeat;
+	background-position: 130px 0px;}
+.contWrapTwo .content .body{width: 150px; position: relative;}
+.contWrapTwo .content .body a{font-size: 14px;color: #4b8ce0;}
+
+
+footer#footer{background: #5e5e5e;}
+.footerTopWrap{background: #4d4d4d;}
+.footerTop{width: 980px; margin: 0 auto;}
+.footerTop li{float: left; position: relative;}
+.footerTop li a{display: block; line-height: 40px; color: white;
+				padding: 0 15px;}
+.footerTop li:first-child a{padding-left: 0;}
+.footerTop li:after{content:""; display: block; width: 1px; height: 16px; 
+background-color: #fff;position: absolute; top: 10px;right: 0px;}
+
+.footerBottom{width: 980px; margin: 0 auto; color: white;}
+.footerBottom .logo{float: left;width: 200px;font-size: 20px;
+	font-weight: bold;}
+.footerBottom .copy{float: left;}
+
+
+.mb5{margin-bottom: 5px !important;}
+.mb10{margin-bottom: 10px !important;}
+.mb15{margin-bottom: 15px !important;}
+.mb20{margin-bottom: 20px !important;}
+.mb30{margin-bottom: 30px !important;}
+.pa10{padding: 10px !important;}
+.pa15{padding: 15px !important;}
+.pa20{padding: 20px !important;}
+.pb20{padding-bottom: 20px;}
+.pt20{padding-top: 20px;}
