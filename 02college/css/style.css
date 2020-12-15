@@ -68,11 +68,44 @@ text-align: center; line-height: 40px;}
 
 .contents02 li{color: #fff; position: relative;}
 .contents02 a{display: block; color: #fff; width: 170px; height: 40px;
-border: 1px solid #fff; text-align: center; line-height: 40px;}
+border: 1px solid #fff; text-align: center; line-height: 40px;position: absolute; bottom: -30px;}
 .contents02>ul>li>div>div>p {font-size: 2em; margin-bottom: 20px;}
 .contents02>ul>li>div>p {margin-bottom: 35px;}
 .contents02>ul>li>div {position: absolute; top: 80px; left: 30px;}
+.overlay{width: 170px;height: 40px; background: #000; position: absolute; bottom: -30px; opacity: 0.5;}
 
-.contents03{font-weight: bold; font-size: 1.5em; color: #fff;}
+.contents03{font-weight: bold; font-size: 1.5em; color: #fff; position: relative;}
+.contents03 p{position: absolute;top: 20px;left: 30px;}
+.contents03 img{position: absolute; bottom: 30px; left: 30px;}
+
+.contents04{color: #fff; position: relative;}
+.contents04 p{font-weight: bold; font-size: 1.5em; position: absolute; left: 20px; top: 20px;}
+.contents04 a{color: #fff; display: block; font-size: 0.8em;}
+.date {position: absolute;right: 20px; font-size: 0.8em; top: 110px;}
+.siren {position: absolute;left: 20px; top: 110px;}
+.contents04 p:after{content:"";display: block;width: 260px;height: 2px;background: #fff;
+margin-top: 20px;}
+
+.c5t {color: #03173c;font-size: 1.5em; font-weight: bold; 
+	position: absolute; top: 20px; left: 20px;}
+.ct5_01 {text-overflow: ellipsis; width: 125px; position: absolute; 
+	right: 20px; top: 75px; font-size: 0.8em; overflow: hidden; color: #4c4c4c;}
+.contents05{position: relative;}
+.contents05>div>img{position: absolute; left: 20px; top: 70px;}
+.contents05>div>a{position: absolute; bottom: 20px; right: 20px;}
+
+.contents06{position: relative;}
+.contents06 p{position: absolute; bottom: 15px;color: #fff; font-weight: bold; left: 100px;}
+.contents06 div{width: 300px;height: 50px;background: #000; 
+	position: absolute; bottom: 0; opacity: 0.7;}
+
+.contents08{position: relative;}
+.contents08 ul{position: absolute; top: 0; color: #fd503f; top: 30px;left: 30px;}
+.contents08 h1{font-size: 3.5em;}
+.contents08 p{font-size: 2em;}
+
+.contents08 a{display: block;color: #fff;width: 170px;height: 40px; 
+	background: #fd503f; text-align: center;line-height: 40px;}
+
 
 
