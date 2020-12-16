@@ -68,6 +68,7 @@ background-size: auto,cover; margin-bottom: 30px;}
 .sliderTxt p{color: #1651b9; font-size: 3em; margin-bottom: 30px;}
 .sliderTxt a{display: block;color: #fff; width: 170px;height: 40px; background: #182c4d;
 text-align: center; line-height: 40px;}
+.sliderTxt a:hover{background: #4169E1; color: #182c4d;}
 
 .nextBtn {position: absolute; right: 0; top: 190px; cursor: pointer;}
 .prevBtn {position: absolute; left: 0; top: 190px; cursor: pointer;}
@@ -138,6 +139,7 @@ margin-top: 20px;}
 font-size: 0.8em;color: #585858; cursor: pointer;}
 .condown img{cursor: pointer;}
 
+.footWrap{width: 1200px; margin: 0 auto; position: relative;}
 .foot{width: 900px; margin-left: 650px;}
 .foot li{float: left; width: 150px; 
 	font-size: 0.9em; height: 30px; cursor: pointer; text-align: center;}
@@ -148,8 +150,8 @@ display: block; position: absolute; top: 7px; margin-left: 150px;}
 .foot p{color: #888888; font-size: 0.85em;}
 .foot p:nth-child(2){margin-bottom: 10px;}
 .foot ul{margin-left: -47px;}
-
-
+.foot{position: absolute;top: 0; left: -350px;}
+.footlogo{cursor: pointer;}
 
 
 
