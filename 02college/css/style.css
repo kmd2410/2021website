@@ -43,10 +43,10 @@
 .buger img{position: absolute; right: 0; top: 0; width: 90px;height: 45px; top: 40px}
 
 /*contents*/
-#contents{padding-bottom: 300px;
+#contents{padding-bottom: 70px;
 background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg);
 background-repeat: repeat,no-repeat; background-position: center;
-background-size: auto,cover;}
+background-size: auto,cover; margin-bottom: 30px;}
 .title{width: 1200px; margin: 0 auto; 
 	position: relative; padding: 80px 0 50px 0;}
 .title img{position: absolute; right: 0; top: 70px;}
@@ -107,6 +107,9 @@ margin-top: 20px;}
 .contents06 div{width: 300px;height: 50px;background: #000; 
 	position: absolute; bottom: 0; opacity: 0.7;}
 
+.contents07{position: relative;}
+.contents07 img:nth-child(2){position: absolute; top: 90px; left: 120px; cursor: pointer;}
+
 .contents08{position: relative;}
 .contents08 ul{position: absolute; top: 0; color: #fd503f; top: 30px;left: 30px;}
 .contents08 h1{font-size: 3.5em;}
@@ -114,6 +117,36 @@ margin-top: 20px;}
 
 .contents08 a{display: block;color: #fff;width: 170px;height: 40px; 
 	background: #fd503f; text-align: center;line-height: 40px;}
+
+.container{margin-bottom: 20px;}
+.condown {width: 1200px; background-color: #fff; margin: 0 auto	; 
+	height: 60px;}
+.condown div{float: left; width: 1200px;}
+.condown p{float: left;}
+.condown>div>div{width: 300px; text-align: center; line-height: 60px; position: relative;}
+.condown>div>div>p:nth-child(1){font-weight: bold; color: #01183a; 
+	font-size: 1.2em;width: 130px; padding-left: 40px;}
+.condown>div>div>p:nth-child(2){cursor: pointer; width: 170px;}
+.condown>div>div:after{content:"";width: 2px;height: 60px;background: #6b6b6b; position: absolute; top: 0; right: 0;}
+.condown>div>p:nth-child(2){line-height: 60px; width: 300px; font-size: 0.9em;
+	text-align: center; padding-left: 45px; color: #585858; font-weight: bold;}
+.condown>div>p:nth-child(3){line-height: 60px; width: 560px; text-align: center;
+font-size: 0.8em;color: #585858; cursor: pointer;}
+.condown img{cursor: pointer;}
+
+.foot{width: 900px; margin-left: 650px;}
+.foot li{float: left; width: 150px; 
+	font-size: 0.9em; height: 30px; cursor: pointer; text-align: center;}
+.foot li:after{content: ""; width: 1px;height: 10px; background: #000; 
+display: block; position: absolute; top: 7px; margin-left: 150px;}
+.foot li:last-child:after{display: none;}
+.foot {position: relative;}
+.foot p{color: #888888; font-size: 0.85em;}
+.foot p:nth-child(2){margin-bottom: 10px;}
+.foot ul{margin-left: -47px;}
+
+
+
 
 
 
