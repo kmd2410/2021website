@@ -7,9 +7,12 @@
 			background: #fff;
 			margin-bottom: 0;
 		}
-.bx-wrapper .bx-pager{bottom: 30px;}
-.bx-wrapper .bx-pager.bx-default-pager a{background-color: #535353;}
-.bx-wrapper .bx-pager.bx-default-pager a.active{background-color:  #0144af;}
+.oneone .bx-wrapper .bx-pager{bottom: 30px;}
+.oneone .bx-wrapper .bx-pager.bx-default-pager a{background-color: #535353;}
+.oneone .bx-wrapper .bx-pager.bx-default-pager a.active{background-color:  #0144af;}
+.contents08 .bx-wrapper .bx-pager{top: 0; left: 380px;}
+.contents08 .bx-wrapper .bx-pager.bx-default-pager a{background-color: #535353;}
+.contents08 .bx-wrapper .bx-pager.bx-default-pager a.active{background-color:  #f74237;}
 /*header*/
 .util_menu_wrap{background: #0044af;}
 .util_menu{width: 1200px; margin: 0 auto;}
