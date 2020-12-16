@@ -69,8 +69,10 @@ background-size: auto,cover; margin-bottom: 30px;}
 .sliderTxt a{display: block;color: #fff; width: 170px;height: 40px; background: #182c4d;
 text-align: center; line-height: 40px;}
 
-.nextBtn {position: absolute; right: 0; top: 190px;}
-.prevBtn {position: absolute; left: 0; top: 190px;}
+.nextBtn {position: absolute; right: 0; top: 190px; cursor: pointer;}
+.prevBtn {position: absolute; left: 0; top: 190px; cursor: pointer;}
+.nextBtn:hover{opacity: 0.8;}
+.prevBtn:hover{opacity:0.8;}
 .container>ul>li{position: relative;}
 
 
@@ -81,6 +83,7 @@ border: 1px solid #fff; text-align: center; line-height: 40px;position: absolute
 .contents02>ul>li>div>p {margin-bottom: 35px;}
 .contents02>ul>li>div {position: absolute; top: 80px; left: 30px;}
 .overlay{width: 170px;height: 40px; background: #000; position: absolute; bottom: -30px; opacity: 0.5;}
+.contents02 a:hover{color: #000;}
 
 .contents03{font-weight: bold; font-size: 1.5em; color: #fff; position: relative;}
 .contents03 p{position: absolute;top: 20px;left: 30px;}
@@ -117,6 +120,7 @@ margin-top: 20px;}
 
 .contents08 a{display: block;color: #fff;width: 170px;height: 40px; 
 	background: #fd503f; text-align: center;line-height: 40px;}
+.contents08 a:hover{background: #fff; color: #fd503f;}
 
 .container{margin-bottom: 20px;}
 .condown {width: 1200px; background-color: #fff; margin: 0 auto	; 
