@@ -12,10 +12,24 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".slider").bxSlider();	
+			var mySlider = $(".slider").bxSlider({
+				auto:false,
+				controls:false,
+			});	
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+			$(".slider02").bxSlider({
+				controls:false,
+				auto:true
+			});
 		});
-
 	</script>
+	
+	
 </head>
 <body>
 	<header id="header">
@@ -66,14 +80,14 @@
 		<div class="container"> <!-- 1200 m0 -->
 			<ul class="clearfix">
 				<li>
-					<ul class="slider">
+					<ul class="slider">							
 						<li class="sliderjin">
 							<img src="images/bg02rere.jpg" alt="">
 							<div class="sliderTxt">
 								<p><strong>한국</strong>에서<br><strong>시작</strong>하는<br>새로운 <strong>꿈</strong></p>
 								<a href="#">자세히보기</a>
 							</div>
-						</li>
+						</li>						
 						<li class="sliderjin">
 							<img src="images/bg02rere.jpg" alt="">
 							<div class="sliderTxt">
@@ -89,6 +103,8 @@
 							</div>
 						</li>
 					</ul>
+					<div class="nextBtn"><img src="images/next.jpg" alt="#"></div>
+					<div class="prevBtn"><img src="images/prev.jpg" alt="#"></div>
 				</li>
 				<li class="contents02">
 					<ul>
@@ -153,16 +169,48 @@
 					<img src="images/ball.jpg" alt="">
 				</li>
 				<li class="contents08">
-					<img src="images/person.jpg" alt="">
-					<ul>
-						<li><p>2017년 신·편입생2차 모집</p></li>
-						<li><h1>2017.7.1~7.10</h1></li>
-						<li><a href="#">입학사전예약▶</a></li>
-						<li><div></div></li>
-					</ul>
+					<div class="slider02">	
+						<div>
+							<img src="images/person.jpg" alt="">
+							<ul>
+								<li><p>2017년 신·편입생2차 모집</p></li>
+								<li><h1>2017.7.1~7.10</h1></li>
+								<li><a href="#">입학사전예약▶</a></li>
+								<li><div></div></li>
+							</ul>
+						</div>
+						<div>
+							<img src="images/person.jpg" alt="">
+							<ul>
+								<li><p>2017년 신·편입생2차 모집</p></li>
+								<li><h1>2017.7.1~7.10</h1></li>
+								<li><a href="#">입학사전예약▶</a></li>
+								<li><div></div></li>
+							</ul>
+						</div>	
+						<div>
+							<img src="images/person.jpg" alt="">
+							<ul>
+								<li><p>2017년 신·편입생2차 모집</p></li>
+								<li><h1>2017.7.1~7.10</h1></li>
+								<li><a href="#">입학사전예약▶</a></li>
+								<li><div></div></li>
+							</ul>
+						</div>	
+						<div>
+							<img src="images/person.jpg" alt="">
+							<ul>
+								<li><p>2017년 신·편입생2차 모집</p></li>
+								<li><h1>2017.7.1~7.10</h1></li>
+								<li><a href="#">입학사전예약▶</a></li>
+								<li><div></div></li>
+							</ul>
+						</div>
+					</div>			
 				</li>
 			</ul>
 		</div>
+		
 		<div class="condown">
 			<div>
 				<p>학사일정</p>

@@ -66,6 +66,11 @@ background-size: auto,cover;}
 .sliderTxt a{display: block;color: #fff; width: 170px;height: 40px; background: #182c4d;
 text-align: center; line-height: 40px;}
 
+.nextBtn {position: absolute; right: 0; top: 190px;}
+.prevBtn {position: absolute; left: 0; top: 190px;}
+.container>ul>li{position: relative;}
+
+
 .contents02 li{color: #fff; position: relative;}
 .contents02 a{display: block; color: #fff; width: 170px; height: 40px;
 border: 1px solid #fff; text-align: center; line-height: 40px;position: absolute; bottom: -30px;}
