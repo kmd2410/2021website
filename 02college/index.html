@@ -26,7 +26,18 @@
 				controls:false,
 				auto:true
 			});
-			
+			var mySlider2 = $(".slider03").bxSlider({
+				controls:false,
+				auto:true,
+				pager:false,
+				mode:"vertical",
+			});
+			$(".nextB").click(function(){
+				mySlider2.goToNextSlide();
+			});
+			$(".prevB").click(function(){
+				mySlider2.goToPrevSlide();
+			});
 		});
 	</script>
 	
@@ -185,7 +196,7 @@
 				<li class="contents05">
 					<h3>SNS NEWS</h3>
 					<div class="contents05_01">
-						<a href="#">
+						<a href="#" class="clearfix">
 							<img src="images/school01.jpg" alt="">
 							<span>한국 대학교는<br>2017학년도 신입생<br>입학식을 3월 2일(목)<br>본교 종합체육관...</span>
 						</a>
@@ -261,9 +272,13 @@
 					<p>학사일정</p>			
 					<p><strong>＜</strong> 2016 07 <strong>＞</strong></p>
 				</div>				
-				<p>2016-1학기 성적 열람 및 상담 신청</p>
-				<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</p>
-				<img src="images/point.jpg" alt="">
+				<div>2016-1학기 성적 열람 및 상담 신청</div>
+				<div class="slider03">
+					<div>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</div>
+					<div>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</div>
+				</div>
+				<img src="images/nextB.jpg" alt="" class="nextB">
+				<img src="images/prevB.jpg" alt="" class="prevB">
 			</div>
 		</div>
 	</div>

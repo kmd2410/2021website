@@ -10,11 +10,12 @@
 .oneone .bx-wrapper .bx-pager{bottom: 30px;}
 .oneone .bx-wrapper .bx-pager.bx-default-pager a{background-color: #535353;}
 .oneone .bx-wrapper .bx-pager.bx-default-pager a.active{background-color:  #0144af;}
-.contents08 .bx-wrapper .bx-pager{bottom: 30px; height: 15px; top: 0; right: -380px;}
+.contents08 .bx-wrapper .bx-pager{height: 50px; top: 0;width:200px; right:0;}
 .contents08 .bx-wrapper .bx-pager.bx-default-pager a{background-color: #535353;}
 .contents08 .bx-wrapper .bx-pager.bx-default-pager a.active{background-color:  #f74237;}
 
 /*header*/
+#header{min-width:1200px;}
 .util_menu_wrap{background: #0044af;}
 .util_menu{width: 1200px; margin: 0 auto;}
 .left {float: left;}
@@ -44,7 +45,7 @@
 .buger img{position: absolute; right: 0; top: 0; width: 90px;height: 45px; top: 40px}
 
 /*contents*/
-#contents{padding-bottom: 70px;
+#contents{min-width:1200px;padding-bottom: 70px;
 background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg);
 background-repeat: repeat,no-repeat; background-position: center;
 background-size: auto,cover; margin-bottom: 30px;}
@@ -133,8 +134,9 @@ margin-top: 20px;}*/
 .contents05 {padding: 30px 20px;}
 .contents05 h3{color: #03173c; margin-bottom: 20px;}
 .contents05 .sns{position: absolute; right: 20px; bottom: 20px;}
-.contents05_01 a{position: relative; display: block;}
-.contents05 span{font-size: 0.8em; position: absolute; right: 0; top: 5px;}
+.contents05_01 a{/*position: relative;*/ display: block;}
+.contents05_01 a img{float: left;margin-right:10px;}
+.contents05 span{font-size: 0.8em; /*position: absolute; right: 0; top: 5px;*/}
 
 
 
@@ -164,10 +166,10 @@ margin-top: 20px;}*/
 .condown>div>div>p:nth-child(1){font-weight: bold; color: #01183a; 
 	font-size: 1.2em;width: 130px; padding-left: 40px;}
 .condown>div>div>p:nth-child(2){cursor: pointer; width: 170px;}
-.condown>div>div:after{content:"";width: 2px;height: 60px;background: #6b6b6b; position: absolute; top: 0; right: 0;}
-.condown>div>p:nth-child(2){line-height: 60px; width: 300px; font-size: 0.9em;
+.condown>div>div:nth-child(1):after{content:"";width: 2px;height: 60px;background: #6b6b6b; position: absolute; top: 0; right: 0;}
+.condown>div>div:nth-child(2){line-height: 60px; width: 300px; font-size: 0.9em;
 	text-align: center; padding-left: 45px; color: #585858; font-weight: bold;}
-.condown>div>p:nth-child(3){line-height: 60px; width: 560px; text-align: center;
+.condown>div>div:nth-child(3){line-height: 60px; width: 560px; text-align: center;
 font-size: 0.8em;color: #585858; cursor: pointer;}
 .condown img{cursor: pointer;}
 
