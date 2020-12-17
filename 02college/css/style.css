@@ -172,6 +172,7 @@ margin-top: 20px;}*/
 .condown>div>div:nth-child(3){line-height: 60px; width: 560px; text-align: center;
 font-size: 0.8em;color: #585858; cursor: pointer;}
 .condown img{cursor: pointer;}
+.condown img:hover{opacity: 0.8;}
 
 .footWrap{width: 1200px; margin: 0 auto; position: relative;}
 .foot{width: 900px; margin-left: 650px;}
