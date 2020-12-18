@@ -46,7 +46,7 @@
 
 /*contents*/
 #contents{min-width:1200px;padding-bottom: 70px;
-background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg);
+background-image: url(../images/bg_dot.gif),url(../images/main_bgre.jpg);
 background-repeat: repeat,no-repeat; background-position: center;
 background-size: auto,cover; margin-bottom: 30px;}
 
@@ -92,7 +92,7 @@ border: 1px solid #fff; text-align: center; line-height: 40px;position: absolute
 .overlay{width: 170px;height: 40px; background: #000; position: absolute; bottom: -30px; opacity: 0.5;}
 .contents02 a:hover{color: #000;}*/
 
-.contents02{padding:60px 46px;background:url(../images/bg03rere.jpg);}
+.contents02{padding:60px 45px;background:url(../images/bg03rere.jpg);}
 .contents02txt{color: #fff;}
 .contents02 .contents02txt h3{font-size:2em;margin-bottom:30px;}
 .contents02 .contents02txt p{margin-bottom:40px }
