@@ -167,7 +167,7 @@ transition: 0.8s; cursor: pointer;}
 
 .container{margin-bottom: 20px;}
 .condown {width: 1200px; background-color: #fff; margin: 0 auto	; 
-	height: 60px;}
+	height: 60px; }
 .condown div{float: left; width: 1200px;}
 .condown p{float: left;}
 .condown>div>div{width: 300px; text-align: center; line-height: 60px; position: relative;}
@@ -179,8 +179,9 @@ transition: 0.8s; cursor: pointer;}
 	text-align: center; padding-left: 45px; color: #585858; font-weight: bold;}
 .condown>div>div:nth-child(3){line-height: 60px; width: 560px; text-align: center;
 font-size: 0.8em;color: #585858; cursor: pointer;}
-.condown img{cursor: pointer;}
+.condown img{cursor: pointer; float:right;}
 .condown img:hover{opacity: 0.8;}
+
 
 .footWrap{width: 1200px; margin: 0 auto; position: relative;}
 .foot{width: 900px; margin-left: 650px;}
