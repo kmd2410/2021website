@@ -1,0 +1,75 @@
+@charset "utf-8";
+#header .main{background-image: url(../images/air.jpg); height: 90px; background-repeat: no-repeat;
+			background-size: cover; display: block;}
+#header .logowrap{width: 980px; margin: 0 auto; position: relative;}
+#header .logowrap .logoimg{margin-top: 20px; width: 37px; height: 40px;cursor: pointer; float: left;}
+#header .logowrap h1{color: #fff; padding-top: 10px; height: 45px; width: 160px; cursor: pointer;}
+#header .logowrap .himedia{color: #fff; width: 150px; text-align: center; cursor: pointer;} 
+#header .sns li{float: left; width: 24px; margin-left: 5px; cursor: pointer;}
+#header .mainlogo{width: 147px;height: 45px; position: relative; }
+
+
+.logowrap fieldset{width: 300px; height: 30px; background: #fff; border-radius: 145px 145px; 
+	position: absolute; top: 0; left: 280px; top: 30px; border: 0 none; line-height: 30px;}
+.logowrap fieldset label{margin-left: 15px; font-size: 0.8em;}
+.logowrap .search{border: 0 none; margin-left: 10px;}
+.logowrap .number{position: absolute;top: 30px; color: #fff; font-size: 1.5em; left: 650px;}
+.logowrap ul{position: absolute;top: 35px; right: 0px;}
+
+.menu{border-bottom: 5px solid #0e73a7;}
+.menuwrap{width: 980px; margin: 0 auto; position: relative;}
+.menuwrap li{float: left; width: 163.333px; text-align: center; line-height: 60px;}
+.menuwrap li:after{content: "";width: 1px;height: 60px; background: #eaeaea; 
+display: block; position: absolute; top: 0; margin-left: 163px;}
+.menuwrap li:first-child:before{content: "";display: block;width: 1px;height: 60px;background: #eaeaea;
+position: absolute; top: 0;}
+.menuwrap a{display: block;}
+.menuwrap a:hover{background: pink;}
+
+#contents{background-image: url(../images/01bg.jpg);width: 100%;height: 1240px;display: block;
+background-size: cover; background-repeat: no-repeat; padding-top: 55px;}/*높이나중에 없애자태희야*/
+.maincontents{width: 980px; margin: 0 auto; position: relative;}
+.maincontents .slidertap a{width: 130px; line-height: 75px; background: #0099cb; 
+	text-align: center; display: block;}
+.maincontents .slidertap a:active{background: #fff;}
+
+
+.slider fieldset{width: 350px; background: #fff; border: 0 none; 
+	position: absolute; top: 0; left: 130px; padding: 17px 40px;}
+.country{display: block; width: 280px;height: 30px; }
+.date{width: 130px;height: 30px;}
+.level{width: 115px;height: 30px;}
+.num{width: 60px;height: 30px;}
+.slidersearch{display: block;width: 280px;height: 40px; color: #fff; 
+	background: #ea4f1f; border: 0 none; border-radius: 5px 5px; cursor: pointer;}
+.end{position: absolute;top: 92px; left: 190px;}
+
+.contents01 li{float: left; position: relative; width: 234px; height: 216px;}
+/*.contents01 li:nth-child(1){background-image: url(../images/03여행01.jpg);
+width: 233px;height: 216px;}
+.contents01 li:nth-child(2){background-image: url(../images/03여행02.jpg);
+width: 233px;height: 216px; margin-left: 20px;}*/
+.contents01 li a{background: #152630; width: 100%; display: block; 
+	position: absolute; bottom: 0;  color: #fff; text-align: center;
+line-height: 50px; display: none; }
+.contents01 li a span{color: green;}
+.contents01 li:hover a{display: block;}
+
+.contentstxt{position: absolute; top: 0; right: 100px;}
+.contentstxt h1{color: #152532; font-size: 4em; margin-bottom: 10px;}
+.contentstxt p{color: #142630; font-size: 1.5em;}
+
+.subcontents{width: 980px; margin: 0 auto;}
+.subcontents li{float: left;}
+.mb10{margin-bottom: 10px;}
+.mt15{margin-top: 15px;}
+.mt20{margin-top: 20px;}
+.ml5{margin-left: 5px;}
+.ml10{margin-left: 10px;}
+.ml14{margin-left: 14px;}
+.ml16{margin-left: 16px;}
+.ml20{margin-left: 20px;}
+.ml30{margin-left: 30px;}
+.ml40{margin-left: 40px;}
+.ml70{margin-left: 70px;}
+.bd{border: 2px solid #ececec; border-radius: 5px 5px;}
