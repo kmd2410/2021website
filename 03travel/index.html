@@ -12,6 +12,7 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
+			
 			$(".slider").bxSlider({
 				auto:false,
 				controls:false,
@@ -19,13 +20,21 @@
 				pagerCustom:".slidertap"
 				
 			});	
-			// $(".slider03").bxSlider({
-				// auto:false,
-				// controls:true,
-				// pager:false,
+			$(".slider02").bxSlider({
+				auto:false,
+				controls:true,
+				pager:false,
 				// pagerCustom:".slidertab"
 				// mode:""
-			// });	
+			});
+			$(".slider03").bxSlider({
+				auto:false,
+				controls:true,
+				pager:false,
+				// pagerCustom:".slidertab"
+				// mode:""
+			});	
+			
 		});
 		
 	</script>
@@ -219,16 +228,22 @@
 							<img src="images/03여행03.jpg" alt=""></img>
 							<a class="bgg" href="#">HILLTON HOTEL (PARIS)<br><span>★★★</span>★★</a>
 						</div>
-						<!-- <div>
+						<div>
 							<img src="images/03여행03.jpg" alt=""></img>
 							<a class="bgg" href="#">HILLTON HOTEL (PARIS)<br><span>★★★</span>★★</a>
-						</div> -->
+						</div>
 					</div>			
 				</li>
-				<li class="contents04 ml16 slider03">
-					<div>
-						<img src="images/03여행04.jpg" alt=""></img>
-						<a class="bgn" href="">관광명소(디즈니랜드)<br><span>★★★</span>★★</a>
+				<li class="contents04 ml16">
+					<div class=slider03>
+						<div>
+							<img src="images/03여행04.jpg" alt=""></img>
+							<a class="bgn" href="">관광명소(디즈니랜드)<br><span>★★★</span>★★</a>
+						</div>
+						<div>
+							<img src="images/03여행04.jpg" alt=""></img>
+							<a class="bgn" href="">관광명소(디즈니랜드)<br><span>★★★</span>★★</a>
+						</div>
 					</div>	
 				</li>
 				<li class="contents05 ml16">
@@ -241,22 +256,38 @@
 				</li>
 				<li class="contents07 mt15">
 					<img src="images/03여행07.jpg" alt=""></img>
+					<div></div>
 					<a href=""></a>
 				</li>
 				<li class="contents08 ml15 mt15">
 					<img src="images/03여행08.jpg" alt=""></img>
+					<div></div>
 					<a href=""></a>
 				</li>
 				<li class="contents09 ml15 mt15">
 					<img src="images/03여행09.jpg" alt=""></img>
+					<div></div>
 					<a href=""></a>
 				</li>
 				<li class="contents10 ml14 mt15">
 					<img src="images/03여행10.jpg" alt=""></img>
+					<div></div>
 					<a href=""></a>
 				</li>
 			</ul>
-		</div>
+		</div>	
 	</contents>
+	<div id="footer">
+			<div class="foot">
+				<ul class="clearfix mb10">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#"><strong>개인정보취급방침</strong></a></li>
+					<li><a href="#">사이트맵</a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">광고 및 제휴문의</a></li>
+				</ul>
+				<p>123-456 서울특별시 구로구 구로동 (주)하이미디어 사업자등록번호:123-45-678910 대표이사:홍길동 대표번호:02-1234-5678<br>COPYRIGHTⓒ2014 HIMEDIA TOUR. ALL RIGHTS RESERVED.</p>
+			</div>
+		</div>
 </body>
 </html>
