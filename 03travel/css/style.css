@@ -1,4 +1,5 @@
 @charset "utf-8";
+/*헤더(로고,검색창,전화번호,sns메신져)*/
 #header .main{background-image: url(../images/air.jpg); height: 90px; background-repeat: no-repeat;
 			background-size: cover; display: block;}
 #header .logowrap{width: 980px; margin: 0 auto; position: relative;}
@@ -14,7 +15,10 @@
 #header .logowrap .search{border: 0 none; margin-left: 10px;}
 #header .logowrap .number{position: absolute;top: 30px; color: #fff; font-size: 1.5em; left: 650px;}
 #header .logowrap ul{position: absolute;top: 35px; right: 0px;}
+#header .logowrap .btn{background-image: url(../images/search.jpg); text-indent: -9999px;
+width: 20px;height: 20px; background-position: 50% 50%; border: 0 none; margin-left: 10px;}
 
+/*헤더메뉴(여행도시,호텔예약,렌트카,여행팁,회사소개,커뮤니티)*/
 #header .menu{border-bottom: 5px solid #0e73a7;}
 #header .menuwrap{width: 980px; margin: 0 auto; position: relative;}
 #header .menuwrap li{float: left; width: 163.333px; text-align: center; line-height: 60px;}
@@ -23,10 +27,11 @@
 #header .menuwrap li:first-child:before{content: "";display: block;width: 1px;height: 60px;background: #eaeaea;
 position: absolute; top: 0;}
 #header .menuwrap a{display: block;}
-#header .menuwrap a:hover{background: pink;}
+#header .menuwrap a:hover{background: #0099cb; color: #fff;}
 
+/*컨텐츠시작*/
 #contents{background-image: url(../images/01bg.jpg);width: 100%;display: block;
-background-size: cover; background-repeat: no-repeat; padding-top: 55px; margin-bottom: 30px; }/*높이나중에 없애자태희야*/
+background-size: cover; background-repeat: no-repeat; padding-top: 55px; margin-bottom: 30px;position: relative; }/*높이나중에 없애자태희야*/
 #contents .maincontents{width: 980px; margin: 0 auto; position: relative;}
 #contents .slidertap{width: 130px;}
 #contents .maincontents .slidertap a{width: 130px; line-height: 75px; background: #0099cb; 
@@ -54,8 +59,13 @@ width: 233px;height: 216px; margin-left: 20px;}*/
 line-height: 50px; display: none; }
 .contents01 li a span{color: green;}
 .contents01 li:hover a{display: block;}
+.contents01,.contents02{cursor: pointer;}
 
-.contents03{width: 233px;}
+.contents03{width: 233px; }
+.contents03 .nextBtn,.contents04 .nextBtn01{position: absolute; right: 0;top: 90px;}
+.contents03 .prevBtn,.contents04 .prevBtn01{position: absolute; left: 0; top: 90px;}
+.contents03 .nextBtn:hover,.contents04 .nextBtn01:hover{opacity: 0.8;}
+.contents03 .prevBtn:hover,.contents04 .prevBtn01:hover{opacity: 0.8;}
 .contents04{width: 233px;}
 
 .contentstxt{position: absolute; top: 0; right: 100px;}
@@ -63,25 +73,59 @@ line-height: 50px; display: none; }
 .contentstxt p{color: #142630; font-size: 1.5em;}
 
 .subcontents{width: 980px; margin: 0 auto;}
-.subcontents li{float: left; position: relative; height: 216px;}
+.subcontents li{float: left; position: relative; height: 216px; overflow: hidden; cursor: pointer;}
 .subcontents .contents03 a,.contents04 a,.contents05 a,.contents06 a
 {position: absolute; bottom: 0px; width: 100%; display: block; height: 70px;
-color: #fff; padding-top: 13px; padding-left: 15px; display: none;}
+color: #fff; padding-top: 13px; padding-left: 20px; /*display: none;*/}
 .subcontents li:hover a{display: block;}
+.subcontents li:hover .big{transform: scale(1.1);}
+.subcontents li img{display: block;}
 .subcontents span{color: #e3a200;}
 
-
-.contents07 div{background: rgba(81,164,216,0.3);width: 100%; height: 100%; 
+.contents07:hover .plus07,.contents10:hover .plus10,.contents08:hover .plus08,
+.contents09:hover .plus09{transform: rotate(180deg);}
+.contents07 .plus07,.contents10 .plus10{position: absolute;top: 120px;left: 100px; transition: 2s;}
+.contents08 .plus08,.contents09 .plus09{position: absolute;bottom: 120px;left: 100px; transition: 2s;}
+.contents07 p,.contents10 p{position: absolute; top: 20px; text-align: center; color: #fff; 
+	width: 100%; font-size: 0.8em; font-weight: bold;}
+.contents08 p,.contents09 p{position: absolute; bottom: 20px;text-align: center; color: #fff; 
+	width: 100%; font-size: 0.8em; font-weight: bold;}
+.contents07 div{background: rgba(81,164,216,0.4);width: 100%; height: 100%; 
 	position: absolute; top: 0;}
 .contents08 div{background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
 .contents09 div{background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
-.contents10 div{background: rgba(103,174,144,0.3); width: 100%; height: 100%; position: absolute;top: 0;}
+.contents10 div{background: rgba(103,174,144,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
 
+/*푸터*/
 #footer .foot{width: 980px; margin: 0 auto;}
 #footer .foot li{float: left; margin-left: 30px;}
 #footer .foot li:first-child{margin-left: 0;}
 #footer .foot a{display: block;}
 #footer .foot p{color: #717171; font-size: 0.8em;}
+
+.bgi{position: absolute; top: 300px; left: 200px;
+	animation-name: bg01;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;}
+.bgi01{position: absolute; top: 250px; left: 1000px;
+	animation-name: bg02;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	/*animation-fill-mode: forwards;*/
+	animation-direction: alternate;}
+@keyframes bg01{0%{top: 300px;} 50%{top: 350px;}100%{top: 250px;}}
+@keyframes bg02{0%{top: 250px;} 50%{top: 280px;}100%{top: 230px;}}
+
+
+
+
+
+
+
+
+
 
 .mb10{margin-bottom: 10px;}
 .mb20{margin-bottom: 20px;}

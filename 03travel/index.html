@@ -20,19 +20,31 @@
 				pagerCustom:".slidertap"
 				
 			});	
-			$(".slider02").bxSlider({
+			var mySlider = $(".slider02").bxSlider({
 				auto:false,
-				controls:true,
+				controls:false,
 				pager:false,
 				// pagerCustom:".slidertab"
 				// mode:""
 			});
-			$(".slider03").bxSlider({
+			var mySlider01 = $(".slider03").bxSlider({
 				auto:false,
-				controls:true,
+				controls:false,
 				pager:false,
 				// pagerCustom:".slidertab"
 				// mode:""
+			});
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+			$(".nextBtn01").click(function(){
+				mySlider01.goToNextSlide();
+			});
+			$(".prevBtn01").click(function(){
+				mySlider01.goToPrevSlide();
 			});	
 			
 		});
@@ -51,7 +63,7 @@
 					<label for="search"><strong>SEARCH</strong></label>
 					<input type="text" placeholder="검색어를 입력하세요." id="search" 
 					class="search" required>
-					<input type="submit"></input>
+					<input type="submit" class="btn"></input>
 				</fieldset>
 				<p class="number"><strong>+82</strong> 02 1234 5678</p>
 				<ul class="sns clearfix">
@@ -76,6 +88,10 @@
 	</header>
 
 	<contents id="contents">
+		<div>
+			<img class="bgi"src="images/Balloon4.png" alt="">
+			<img class="bgi01"src="images/content1.png" alt="">
+		</div>
 		<div class="maincontents "> <!-- 980px -->
 			<div class="slidertap">
 				<a href="#" data-slide-index="0">공항예약</a>
@@ -231,8 +247,10 @@
 						<div>
 							<img src="images/03여행03.jpg" alt=""></img>
 							<a class="bgg" href="#">HILLTON HOTEL (PARIS)<br><span>★★★</span>★★</a>
-						</div>
-					</div>			
+						</div>						
+					</div>
+					<img class="nextBtn"src="images/next01.jpg" alt="">	
+					<img class="prevBtn"src="images/prev01.jpg" alt="">	
 				</li>
 				<li class="contents04 ml16">
 					<div class=slider03>
@@ -244,50 +262,57 @@
 							<img src="images/03여행04.jpg" alt=""></img>
 							<a class="bgn" href="">관광명소(디즈니랜드)<br><span>★★★</span>★★</a>
 						</div>
-					</div>	
+					</div>
+					<img class="nextBtn01"src="images/next.jpg" alt="">	
+					<img class="prevBtn01"src="images/prev.jpg" alt="">	
 				</li>
 				<li class="contents05 ml16">
-					<img src="images/03여행05.jpg" alt=""></img>					
+					<img class="big" src="images/03여행05.jpg" alt=""></img>					
 					<a class="bgt" href="">20℃ 구름조금<br>습도 60% 바람 남남동 2m/s</a>
 				</li>
 				<li class="contents06 ml16">
-					<img src="images/03여행06.jpg" alt=""></img>
+					<img class="big" src="images/03여행06.jpg" alt=""></img>
 					<a class="bgb" href="">facebook 여행후기<br>(한태희님)</a>
 				</li>
 				<li class="contents07 mt15">
-					<img src="images/03여행07.jpg" alt=""></img>
+					<img class="big" src="images/03여행07.jpg" alt=""></img>
 					<div></div>
-					<a href=""></a>
+					<p><strong style="font-size: 1.5em">여행정보</strong><br><br>다양한 나라의 명소와 맛집 등<br>상세한 정보를 볼수 있습니다.</p>
+					<img class="plus07"src="images/plus.png" alt="">
 				</li>
 				<li class="contents08 ml15 mt15">
-					<img src="images/03여행08.jpg" alt=""></img>
+					<img class="big"src="images/03여행08.jpg" alt=""></img>
 					<div></div>
-					<a href=""></a>
+					<p><strong style="font-size: 1.5em">맛집정보</strong><br><br>다양한 나라의 명소와 맛집 등<br>상세한 정보를 볼수 있습니다.</p>
+					<img class="plus08"src="images/plus.png" alt="">
 				</li>
 				<li class="contents09 ml15 mt15">
-					<img src="images/03여행09.jpg" alt=""></img>
+					<img class="big" src="images/03여행09.jpg" alt=""></img>
 					<div></div>
-					<a href=""></a>
+					<p><strong style="font-size: 1.5em">숙박정보</strong><br><br>다양한 나라의 명소와 맛집 등<br>상세한 정보를 볼수 있습니다.</p>
+					<img class="plus09"src="images/plus.png" alt="">
 				</li>
 				<li class="contents10 ml14 mt15">
-					<img src="images/03여행10.jpg" alt=""></img>
+					<img class="big" src="images/03여행10.jpg" alt=""></img>
 					<div></div>
-					<a href=""></a>
+					<p><strong style="font-size: 1.5em">여행자후기</strong><br><br>다양한 나라의 명소와 맛집 등<br>상세한 정보를 볼수 있습니다.</p>
+					<img class="plus10"src="images/plus.png" alt="">
 				</li>
 			</ul>
-		</div>	
-	</contents>
-	<div id="footer">
-			<div class="foot">
-				<ul class="clearfix mb10">
-					<li><a href="#">이용약관</a></li>
-					<li><a href="#"><strong>개인정보취급방침</strong></a></li>
-					<li><a href="#">사이트맵</a></li>
-					<li><a href="#">고객센터</a></li>
-					<li><a href="#">광고 및 제휴문의</a></li>
-				</ul>
-				<p>123-456 서울특별시 구로구 구로동 (주)하이미디어 사업자등록번호:123-45-678910 대표이사:홍길동 대표번호:02-1234-5678<br>COPYRIGHTⓒ2014 HIMEDIA TOUR. ALL RIGHTS RESERVED.</p>
-			</div>
 		</div>
+	</contents>
+	
+	<div id="footer">
+		<div class="foot">
+			<ul class="clearfix mb10">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보취급방침</strong></a></li>
+				<li><a href="#">사이트맵</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">광고 및 제휴문의</a></li>
+			</ul>
+			<p>123-456 서울특별시 구로구 구로동 (주)하이미디어 사업자등록번호:123-45-678910 대표이사:홍길동 대표번호:02-1234-5678<br>COPYRIGHTⓒ2014 HIMEDIA TOUR. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
 </body>
 </html>
