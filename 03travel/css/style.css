@@ -148,6 +148,28 @@ left: 50%; margin-left: -490px;}
 .subContents.companybg #footer{position: absolute;bottom: 0;left: 50%;margin-left: -490px;}
 
 
+.subContents.company.travelcity{background-image: url(../images/snow.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;height: 300px; width: 100%;}
+.subContents.company.reserve{background-image: url(../images/menu1.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;height: 300px; width: 100%;}
+.subContents.company.rent{background-image: url(../images/menu2.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;height: 300px; width: 100%;}
+.subContents.company.traveltip{background-image: url(../images/menu3.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;height: 300px; width: 100%;}
+.subContents.company.community{background-image: url(../images/menu4.jpg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;height: 300px; width: 100%;}
+
+
 
 
 
