@@ -13,11 +13,12 @@
 	<script>
 		$(document).ready(function(){
 			
-			$(".slider").bxSlider({
+			var msSliderMain = $(".slider").bxSlider({
 				auto:false,
 				controls:false,
 				pager:true,
-				pagerCustom:".slidertap"
+				pagerCustom:".slidertap",
+				touchEnabled:false
 				
 			});	
 			var mySlider = $(".slider02").bxSlider({
