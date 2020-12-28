@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /*헤더(로고,검색창,전화번호,sns메신져)*/
 #header .main{background-image: url(../images/air01.jpg); height: 90px; background-repeat: no-repeat;
 			background-size: cover; display: block;}
@@ -31,7 +32,8 @@ position: absolute; top: 0;}
 
 /*컨텐츠시작*/
 #contents{background-image: url(../images/01bg.jpg);width: 100%;display: block;
-background-size: cover; background-repeat: no-repeat; padding-top: 55px; margin-bottom: 30px;position: relative; }/*높이나중에 없애자태희야*/
+background-size: cover; background-repeat: no-repeat; padding-top: 60px; 
+margin-bottom: 30px;position: relative; padding-bottom: 60px;}/*높이나중에 없애자태희야*/
 #contents .maincontents{width: 980px; margin: 0 auto; position: relative;}
 #contents .slidertap{width: 130px;}
 #contents .maincontents .slidertap a{width: 130px; line-height: 75px; background: #0099cb; 
@@ -103,7 +105,7 @@ color: #fff; padding-top: 13px; padding-left: 20px; /*display: none*/;}
 .contents10 div{background: rgba(103,174,144,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
 
 /*푸터*/
-#footer .foot{width: 980px; margin: 0 auto;}
+#footer .foot{width: 980px; margin: 0 auto;padding-bottom: 30px;}
 #footer .foot li{float: left; margin-left: 30px;}
 #footer .foot li:first-child{margin-left: 0;}
 #footer .foot a{display: block;}
@@ -115,23 +117,44 @@ color: #fff; padding-top: 13px; padding-left: 20px; /*display: none*/;}
 	animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
 	animation-direction: alternate;}
-.bgi02{position: absolute; top: 250px; left: 1000px;
+.bgi02{position: absolute; top: 0px; left: 100px;
 	animation-name: bg02;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
-	/*animation-fill-mode: forwards;*/
+	animation-fill-mode: forwards;
 	animation-direction: alternate;}
-/*.bgi03{position: absolute; right: 0px; 
+.bgi03{position: absolute; top: 100px; right: 0;
 	animation-name: bg03;
-	animation-duration: 40s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
-	animation-direction: forwards;
-	
-	}*/
-
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	}
+.bgi04{position: absolute;top: 0px; left: 200px;
+animation-name: bg04;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;}
+.bgi05{position: absolute;bottom: 0;right: 0;
+animation-name: bg05;
+animation-duration: 7s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+.bgi06{position: absolute;bottom: 0;left: 0;
+animation-name: bg06;
+animation-duration: 7s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
 @keyframes bg01{0%{top: 300px;} 50%{top: 350px;}100%{top: 250px;}}
 @keyframes bg02{0%{top: 250px;} 50%{top: 280px;}100%{top: 230px;}}
-/*@keyframes bg03{form{right:0;}to{right: 2000px;}*/
+@keyframes bg03{from{right: 0;} to{right: 3000px;}}
+@keyframes bg04{0%{top: 0;transform: rotate(0deg);} 50%{top: 90%;transform: rotate(360deg);}}
+@keyframes bg05{0%{bottom: 0;right: 0;transform: rotate(0deg);} 
+				50%{transform: rotate(360deg);bottom: 1020px;right: 1500px;}}
+@keyframes bg06{0%{bottom: 0;left: 0;;transform: rotate(0deg);} 
+				50%{transform: rotate(360deg);bottom: 950px;left: 2000px;}}
 
 .subContents.company{background-image: url(../images/subimg02.jpg);
 					background-position: center;
@@ -207,5 +230,3 @@ left: 50%; margin-left: -490px;}
 			background: #fff;
 			margin-bottom: 0;
 		}
-
-
