@@ -154,7 +154,9 @@ transition: 0.8s; cursor: pointer;}
 
 
 .contents07{position: relative;}
-.contents07 img:nth-child(2){position: absolute; top: 90px; left: 120px; cursor: pointer;}
+.contents07 a img{position: absolute; top: 90px; left: 120px; 
+	cursor: pointer; transform: scale(1);}
+.contents07 a img:hover{transform: scale(1.2);}
 
 
 .contents08txt {position: absolute; top: 30px;left: 30px;color: #fd503f;}
