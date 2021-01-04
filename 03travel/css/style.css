@@ -4,9 +4,7 @@
 #header .main{background-image: url(../images/air01.jpg); height: 90px; background-repeat: no-repeat;
 			background-size: cover; display: block;}
 #header .logowrap{width: 980px; margin: 0 auto; position: relative;}
-#header .logowrap .logoimg{margin-top: 20px; width: 37px; height: 40px;cursor: pointer; float: left;}
-#header .logowrap h1{color: #fff; padding-top: 10px; height: 45px; width: 160px; cursor: pointer;}
-#header .logowrap .himedia{color: #fff; width: 150px; text-align: center; cursor: pointer;} 
+#header .logowrap .logoimg{margin-top: 20px; width: 163px; height: 57px;cursor: pointer; float: left;}
 #header .sns li{float: left; width: 24px; margin-left: 5px; cursor: pointer;}
 #header .mainlogo{width: 147px;height: 45px; position: relative; }
 
@@ -36,9 +34,9 @@ background-size: cover; background-repeat: no-repeat; padding-top: 60px;
 margin-bottom: 30px;position: relative; padding-bottom: 60px;}/*높이나중에 없애자태희야*/
 #contents .maincontents{width: 980px; margin: 0 auto; position: relative;}
 #contents .slidertap{width: 130px;}
-#contents .maincontents .slidertap a{width: 130px; line-height: 75px; background: #0099cb; 
+#contents .maincontents .slidertap a{width: 130px; line-height: 75px; background: /*#0099cb*/#4682B4; 
 	text-align: center; display: block;}
-#contents .maincontents .slidertap a.active{background: #fff;}
+#contents .maincontents .slidertap a.active{background: #fff; color: #4169E1;}
 
 #contents .sliderwrap{width: 350px;position: absolute; top: 0; left: 130px;}
 #contents .slider fieldset{width: 350px; background: #fff; border: 0 none; 
@@ -77,7 +75,7 @@ line-height: 50px; display: none; }
 .contents06 div p:nth-child(3){color: #7e7e7e;}
 
 .contentstxt{position: absolute; top: 0; right: 100px;}
-.contentstxt h1{color: #152532; font-size: 4em; margin-bottom: 10px;}
+.contentstxt h2{color: #152532; font-size: 4em; margin-bottom: 10px;}
 .contentstxt p{color: #142630; font-size: 1.5em;}
 
 .subcontents{width: 980px; margin: 0 auto;}
@@ -98,18 +96,21 @@ color: #fff; padding-top: 13px; padding-left: 20px; /*display: none*/;}
 	width: 100%; font-size: 0.8em; font-weight: bold;}
 .contents08 p,.contents09 p{position: absolute; bottom: 20px;text-align: center; color: #fff; 
 	width: 100%; font-size: 0.8em; font-weight: bold;}
-.contents07 div{background: rgba(81,164,216,0.4);width: 100%; height: 100%; 
-	position: absolute; top: 0;}
-.contents08 div{background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
-.contents09 div{background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
-.contents10 div{background: rgba(103,174,144,0.5); width: 100%; height: 100%; position: absolute;top: 0;}
+.contents07 div{background: rgba(81,164,216,0.4);width: 100%; height: 100%;position: absolute; top: -100%; transition: 0.5s;opacity: 0;}
+.contents08 div{background: rgba(0,0,0,0.5);width: 100%; height: 100%; position: absolute;top: 0;left: -100%; opacity: 0; transition: 0.5s;}
+.contents09 div{background: rgba(0,0,0,0.5);width: 100%; height: 100%; position: absolute;top: 0;right: -100%; opacity: 0; transition: 0.5s;}
+.contents10 div{background: rgba(103,174,144,0.8);width: 100%; height: 100%; position: absolute;bottom: -100%; opacity: 1; transition: 0.5s;}
+.contents07:hover div{display: block;top: 0;opacity: 1;}
+.contents08:hover div{display: block;left: 0;opacity: 1;}
+.contents09:hover div{display: block;right: 0;opacity: 1;}
+.contents10:hover div{display: block;bottom: 0;opacity: 1;}
 
 /*푸터*/
 #footer .foot{width: 980px; margin: 0 auto;padding-bottom: 30px;}
 #footer .foot li{float: left; margin-left: 30px;}
 #footer .foot li:first-child{margin-left: 0;}
 #footer .foot a{display: block;}
-#footer .foot p{color: #717171; font-size: 0.8em;}
+#footer .foot address{color: #717171; font-size: 0.8em; font-style:normal;}
 
 .bgi01{position: absolute; top: 300px; left: 200px;
 	animation-name: bg01;
@@ -168,6 +169,11 @@ width: 400px;height: 3px;background: #fff; margin: 0 auto;}
 width: 100%;height: 980px;position: relative;}
 .subContents.companybg img{width: 980px;height: 930px; position: absolute;top: -70px;
 left: 50%; margin-left: -490px;}
+.subContents.reservebg img{width: 1920px;height: 3000px;}
+.subContents.travelcitybg img{width: 1920px; height: 2900px;}
+.subContents.communitybg img{width: 1920px;height: 3500px;}
+.subContents.rent img{width: 1920px;height: 6100px;}
+
 .subContents.companybg #footer{position: absolute;bottom: 0;left: 50%;margin-left: -490px;}
 
 
@@ -216,6 +222,7 @@ left: 50%; margin-left: -490px;}
 .ml70{margin-left: 70px;}
 .pa20{padding: 20px 0;}
 .pb30{padding-bottom: 30px;}
+.ptb30{padding: 30px 0;}
 .bd{border: 2px solid #ececec; border-radius: 5px 5px;}
 .bgg{background: #529351;}
 .bgn{background: #152630;}
