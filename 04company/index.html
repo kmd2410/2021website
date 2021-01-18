@@ -10,55 +10,138 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link href="https://image.samsungsds.com/resource/kr/images/favicon.ico?queryString=20201221120735" rel="shortcut icon">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
 	<script src="js/wow.js"></script>
+
 </head>
 <script>
+	new WOW().init();
 	$(document).ready(function(){
-		$(".slider").bxSlider({
-			pager:false,
-			auto:false
+		var mySlider = $(".slider").bxSlider({
+			pager:true,
+			auto:true,
+			pagerCustom:".slider_tab",
+			mode:"fade",
+			speed:100,
+			pause:7000,
+			controls:false,
+			onSlideAfter: function(){
+		        $(".slider_01txt h2").addClass("animated fadeInUp");
+		        $(".slider_01txt p").addClass("animated fadeIn delay-1s");
+		        $(".slider_01txt span").addClass("animated fadeIn delay-2s");
+		        $(".slider img").addClass("ani01");
+		        $(".slider_tab").addClass("ani02");},
+		    onSlideBefore: function(){
+		        $(".slider_01txt h2").removeClass("animated fadeInUp");
+		        $(".slider_01txt p").removeClass("animated fadeIn delay-1s");
+		        $(".slider_01txt span").removeClass("animated fadeIn delay-2s");
+		        $(".slider img").removeClass("ani01");
+		        $(".slider_tab").removeClass("ani02");}
 		});
+		var mySlider2 = $(".slider2").bxSlider({
+			controls:false
+		});
+		$(".slider2_next").click(function(){
+			mySlider2.goToNextSlide();
+		});
+		$(".slider2_prev").click(function(){
+			mySlider2.goToPrevSlide();
+		});
+
+
+
+		var now = mySlider.getCurrentSlide();
+
+		       if(now == 0){
+					$(".slider_01txt h2").addClass("animated fadeInUp");
+		        	$(".slider_01txt p").addClass("animated fadeIn delay-1s");
+		        	$(".slider_01txt span").addClass("animated fadeIn delay-2s");
+		        	$(".slider img").addClass("ani01");
+		        	$(".slider_tab").addClass("ani02");
+		        } //슬라이드 첫화면 연습필요
+		$(".play").on("click",function(){
+			$(".pause").show();
+			$(this).hide();
+			mySlider.stopAuto();
+		});
+		$(".pause").on("click",function(){
+			$(".play").show();
+			$(this).hide();
+			mySlider.startAuto();
+		}); // play and pause
 		$(".video").colorbox({
 			iframe:true,
 			innerWidth:1200,
 			innerHeight:675
+		}); // video
+		$(".icon_ani_wrap").hover(function(){
+			$(".icon_ani").addClass("animated flipInX");
+		}, function(){
+			$(".icon_ani").removeClass("animated flipInX");
 		});
+		$(".icon_ani_wrap2").hover(function(){
+			$(".icon_ani2").addClass("animated bounce");
+		}, function(){
+			$(".icon_ani2").removeClass("animated bounce");
+		});
+		$(".icon_ani_wrap3").hover(function(){
+			$(".icon_ani3").addClass("animated flip");
+		}, function(){
+			$(".icon_ani3").removeClass("animated flip");
+		});
+		$(".icon_ani_wrap4").hover(function(){
+			$(".icon_ani4").addClass("animated slideInDown");
+		}, function(){
+			$(".icon_ani4").removeClass("animated slideInDown");
+		});
+		$(".icon_ani_wrap5").hover(function(){
+			$(".icon_ani5").addClass("animated slideInUp");
+		}, function(){
+			$(".icon_ani5").removeClass("animated slideInUp");
+		}); // icon
 	});
+	
 </script>
 <body>
 	<header id="header">
 		<div class="menu_wrap clearfix">
 			<h1>
 				<a href="#">
-					<img src="images/logo_white.svg" alt="logo_white">
+					<img src="images/logo_white.svg" alt="logo_white" class="logo_white">
+					<img src="images/logo_black.svg" alt="" class="logo_black">
 				</a>
 			</h1>
-			<ul class="clearfix">
+			<ul class="menu_txt clearfix">
 				<li><a href="#">오퍼링</a></li>
 				<li><a href="#">업종</a></li>
 				<li><a href="#">라이브러리</a></li>
-				<li><a href="#">뉴스름</a></li>
+				<li><a href="#">뉴스룸</a></li>
 				<li><a href="#">회사정보</a></li>
+				<li><a href="#">My Trial</a></li>
+				<li><a href="#"><i class="fas fa-bars"></i></a></li>
 			</ul>
 		</div>
-
 		<div class="slider_wrap">
 			<ul class="slider">
 				<li class="slider_01">
+					<img src="images/slider01.jpg" alt="#">
 					<div class="overlay"></div>
 					<div class="slider_01txt">
 						<h2>세계적으로 인정받은 삼성SDS 동형암호기술</h2>
-						<p>삼성SDS는 국제 유전체(게놈) 정보분석 보안경진대회 'iDASH 2020'의 '동형암호 기반 암종(癌種) 분석' 부문에 출전, 서울대학교를 비롯한 2개 보안전문기업과 함께 공동 1위를 차지하며 동형암호기술의 우수성을 인정받았습니다. 최근, 금융·의료 분야에 동형암호 기반 분석서비스 적용을 위한 기술 검증을 완료하였으며, 지속적인 기술 고도화를 통해 산업현장의 활용도를 넓혀갈 계획입니다.</p>
-						<span href="" class="slider_01button">기사보기</span>
-						<span href="" class="slider_01button">솔루션보기</span>
+						<p class="txt_ p">삼성SDS는 국제 유전체(게놈) 정보분석 보안경진대회 'iDASH 2020'의 '동형암호 기반 암종(癌種) 분석' 부문에 출전, 서울대학교를 비롯한 2개 보안전문기업과 함께 공동 1위를 차지하며 동형암호기술의 우수성을 인정받았습니다. 최근, 금융·의료 분야에 동형암호 기반 분석서비스 적용을 위한 기술 검증을 완료하였으며, 지속적인 기술 고도화를 통해 산업현장의 활용도를 넓혀갈 계획입니다.</p>
+						<div class="txt_div">
+							<span href="" class="slider_01button">기사보기</span>
+							<span href="" class="slider_01button">솔루션보기</span>
+						</div>
 					</div>
 				</li>
 				<li class="slider_02">
+					<img src="images/slider02.jpg" alt="#">
 					<div class="overlay"></div>
-					<div class="slider_02txt">
+					<div class="slider_01txt">
 						<h2>삼성SDS, 황성우 신임 대표이사 내정 및<br>정기 임원인사 발표</h2>
 						<p>삼성SDS는 2일 신임 대표이사 사장으로 삼성전자 황성우 사장을 내정하고, 4일 부사장 1명, 전무 5명, 상무 12명에 대한 임원 승진 인사를 실시하였습니다. 신임 대표의 다양한 개발사업 경험과 글로벌 역량, 풍부한 대내외 네트워크 기반하에 미래성장을 주도할 임원 등용으로 IT 기술 리더십과 디지털 트랜스포메이션 사업 경쟁력을 더욱 강화해 나갈 것으로 기대됩니다.</p>
 						<span href="" class="slider_02button">CEO 기사보기</span>
@@ -66,8 +149,9 @@
 					</div>
 				</li>
 				<li class="slider_03">
+					<img src="images/slider03.jpg" alt="#">
 					<div class="overlay"></div>
-					<div class="slider_03txt">
+					<div class="slider_01txt">
 						<h2>삼성SDS, 디지털 트랜스포메이션(DT) 솔루션<br>체험 서비스 확대</h2>
 						<p>삼성SDS는 클라우드 기반 IT 솔루션 무료체험 서비스에 보안관리(EAMS)와 3D 설계 데이터 협업(Nexplant 3D eXcellence) 솔루션을 추가하며, 고객의 디지털 트랜스포메이션 지원에 적극 나서고 있습니다.<br>지난 7월 공개된 AI·IoT·블록체인·자동화/협업 솔루션은 730여 기업이 체험하고 이 중 많은 기업들이 실제 적용을 검토하고 있으며,<br>AI 코어기술(AI Cognitive), DT 수준진단 체험 서비스도 순차 공개할 예정입니다.</p>
 						<span href="" class="slider_03button">기사보기</span>
@@ -75,27 +159,113 @@
 					</div>
 				</li>
 				<li class="slider_04">
+					<img src="images/slider04.jpg" alt="#">
 					<div class="overlay"></div>
-					<div class="slider_04txt">
+					<div class="slider_01txt">
 						<h2>프로니까 프로답게, 제대로 일하게 해주는<br>브리티웍스</h2>
-						<p>전 세계 50만 삼성인들이 매일 사용하는 협업툴 브리티웍스,<br>4,300여개의 사내 시스템과 안정적인 연계는 물론 업무 자동화로 126만 시간*을 절감하는 등 일하는 방식을 혁신했습니다.<br>기업의 고민을 가장 잘 아는 브리티웍스로 달라지는 업무 방식을 체험해보세요.<br><br> * 삼성SDS '20년 상반기 누계 실적<br></p>
+						<p>전 세계 50만 삼성인들이 매일 사용하는 협업툴 브리티웍스,<br>4,300여개의 사내 시스템과 안정적인 연계는 물론 업무 자동화로 126만 시간을 절감하는 등 일하는 방식을 혁신했습니다.<br>기업의 고민을 가장 잘 아는 브리티웍스로 달라지는 업무 방식을 체험해보세요.<br><br> * 삼성SDS '20년 상반기 누계 실적<br></p>
 						<span href="" class="slider_04button">솔루션보기</span>
 						<span href="" class="slider_04button">무료체험하기</span>
 					</div>
 				</li>
 			</ul>
+			<div class="slider_tab clearfix">
+				<a href="#" data-slide-index="0">01</a>
+				<a href="#" data-slide-index="1">02</a>
+				<a href="#" data-slide-index="2">03</a>
+				<a href="#" data-slide-index="3">04</a>
+				<span class="play"><i class="fas fa-play"></i></span>
+				<span class="play pause"><i class="fas fa-pause"></i></span>
+			</div>
 		</div>
 
 		<div class="content">
 			<ul class="content_wrap clearfix">
-				<li class="content_01"></li>
+				<li class="content_01 icon_ani_wrap">
+					<div>
+						<i class="fas fa-allergies icon_ani"></i>
+						<p>DT Engine</p>
+					</div>
+				</li>
 				<li class="content_02">
 					<div class="overlay"></div>
-					<a href="https://www.youtube.com/embed/11ImwO6gOTI" class="video"><img src="images/video_icon.png" alt=""></a>
+					<a href="https://www.youtube.com/embed/11ImwO6gOTI" class="video">
+						<div class="content_02_iconwrap">
+							<div class="content_02_icon"></div>
+							<i class="fas fa-play"></i>
+						</div>
+					</a>
 				</li>
-				<li class="content_03"></li>
-				<li class="content_04"></li>
-				<li class="content_05"></li>
+				<li class="content_03">
+					<div class="slider2">
+						<ul class="clearfix">
+							<li class="content_03_left">
+								<div class="content_03_txt">
+									<h2>블록체인</h2>
+									<p>기업환경에 최적화되어<br>높은 확장성과 강력한 보안기능 및<br>빠른 처리속도를 자랑하는<br>블록체인서비스를 만나 보세요.</p>
+								</div>
+							</li>
+							<li class="content_03_right">
+								<img src="images/slider02_01.png" alt="">
+							</li>
+						</ul>
+						<ul class="clearfix">
+							<li class="content_03_left">
+								<div class="content_03_txt">
+									<h2>인공지능/애널리틱스</h2>
+									<p>간편하고 빠른 빅데이터 분석<br>솔루션으로 기업내 산재해 있는<br>데이터에서 비즈니스 인사이트를<br>확보하세요.</p>
+								</div>
+							</li>
+							<li class="content_03_right">
+								<img src="images/slider02_02.jpg" alt="">
+							</li>
+						</ul>
+						<ul class="clearfix">
+							<li class="content_03_left">
+								<div class="content_03_txt">
+									<h2>클라우드</h2>
+									<p>클라우드 도입 컨설팅부터<br>마이그레이션, 운영까지 토탈<br>클라우드 서비스를 경험하세요.</p>
+								</div>
+							</li>
+							<li class="content_03_right">
+								<img src="images/slider02_03.png" alt="">
+							</li>
+						</ul>
+						<ul class="clearfix">
+							<li class="content_03_left">
+								<div class="content_03_txt">
+									<h2>보안</h2>
+									<p>지능화, 고도화되는 보안 위협을<br>효과적으로 대응하는, 삼성그룹의<br>보안 서비스를 귀사에도 도입하세요.</p>
+								</div>
+							</li>
+							<li class="content_03_right">
+								<img src="images/slider02_04.jpg" alt="">
+							</li>
+						</ul>
+					</div>
+					<div class="slider2_icon clearfix">
+						<div class="slider2_num clearfix">
+							<p>01</p>
+							<p>04</p>
+						</div>
+						<i class="fas fa-angle-left slider2_prev"></i>
+						<i class="fas fa-angle-right slider2_next"></i>
+						<div class="slider2_bar"></div>
+						<div class="slider2_bar2"></div>
+					</div>
+				</li>
+				<li class="content_04 icon_ani_wrap2">
+					<div>
+						<i class="fas fa-clipboard-check icon_ani2"></i>
+						<p>Real-time</p>
+					</div>
+				</li>
+				<li class="content_05 icon_ani_wrap3">
+					<div>
+						<i class="fas fa-robot icon_ani3"></i>
+						<p>Automation</p>
+					</div>
+				</li>
 				<li class="content_06">
 					<div class="overlay"></div>
 					<div class="content_06txt">	
@@ -105,6 +275,10 @@
 				</li>
 				<li class="content_07">
 					<div class="overlay"></div>
+					<div class="content_07txt">
+						<p>실시간 문진</p>
+						<h2>1.2만명<br>임직원 대상 COVID-19<br>실시간 문진</h2>
+					</div>
 				</li>
 				<li class="content_08">
 					<div class="overlay"></div>
@@ -113,8 +287,18 @@
 						<h2>Digital Age에 맞게<br>일하는 방식이 변화하는<br>Digital HR이 필요합니다.</h2>
 					</div>
 				</li>
-				<li class="content_09"></li>
-				<li class="content_10"></li>
+				<li class="content_09 icon_ani_wrap4">
+					<div>
+						<i class="fas fa-bezier-curve icon_ani4"></i>
+						<p>Customized</p>
+					</div>
+				</li>
+				<li class="content_10 icon_ani_wrap5">
+					<div>
+						<i class="fas fa-angle-double-up icon_ani5"></i>
+						<p>Improvement</p>
+					</div>
+				</li>
 				<li class="content_11">
 					<div class="overlay"></div>
 					<div class="content_11txt">
@@ -125,5 +309,85 @@
 			</ul>
 		</div>
 	</header>
+
+
+	<section class="section01">
+		<div class="card">
+			<h4>솔루션</h4>
+
+		</div>
+	</section>
 </body>
+<!-- <script>
+	When the user scrolls the page, execute myFunction
+		window.onscroll = function() {myFunction()};
+		// Get the navbar
+		var navbar = document.getElementsByClassName("menu_wrap")[0];
+		// Get the offset position of the navbar
+		var sticky = navbar.offsetTop;
+
+		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+		  if (window.pageYOffset >= 300) {
+		    navbar.classList.add("sticky")
+		    navbar.classList.add("menu_wrap02")
+		    navbar.classList.remove("menu_wrap")
+		  } else {
+		  	navbar.classList.remove("sticky");
+		  	navbar.classList.add("menu_wrap")
+		    navbar.classList.remove("menu_wrap02");
+		  }
+		}
+</script> -->
+	<script>
+		var prevScrollpos = window.pageYOffset;
+		var navbar = document.getElementsByClassName("menu_wrap")[0];
+		window.onscroll = function() {
+		  var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+		  	
+		    document.getElementsByClassName("menu_wrap")[0].style.top = "0";
+		    
+		   	//navbar.classList.toggle("menu_wrap02",true)[0];
+		   	//navbar.classList.add("menu_wrap02");
+		    navbar.setAttribute("class","menu_wrap menu_wrap02");
+		  		    //$(".menu_wrap").addClass("menu_wrap02");
+		  } else {
+		    document.getElementsByClassName("menu_wrap")[0].style.top = "-70px";
+		    //$(".menu_wrap").removeClass("menu_wrap02");
+		    //navbar.classList.toggle("menu_wrap02",false)[0];
+		    navbar.setAttribute("class","menu_wrap");
+		  }
+		  console.log(currentScrollPos)
+
+		  if(currentScrollPos < 100){
+		  	 $(".menu_wrap").removeClass("menu_wrap02");
+		  }
+		  prevScrollpos = currentScrollPos;
+		}   // 스크롤 내릴시 안보이고 올릴시 보임 *픽스드? 
+		
+		
+
+	// 	var play = document.getElementsByClassName("play")[0];
+	// 	var pause = document.getElementsByClassName("pause")[0];
+
+	// 	play.onclick = function(){
+	// 	if(play.style.display == "block"){
+	// 		play.style.display = "none";
+	// 		pause.style.display = "block";
+	// 	} else{
+	// 		pause.style.display = "none";
+	// 		play.style.display = "block";
+	// 	}
+	// 	pause.onclick = function(){
+	// 	if(pause.style.display == "block"){
+	// 		pause.style.display = "none";
+	// 		play.style.display = "block";
+	// 	} else{
+	// 		play.style.display = "none";
+	// 		pause.style.display = "block";
+	// 	}}
+	// }// javascript 연습필요
+	</script>
+	
 </html>
