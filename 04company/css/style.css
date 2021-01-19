@@ -153,4 +153,8 @@
 /*.slider_01txt h2{opacity: 0;}
 .slider_01txt p{opacity: 0;}*/
 
-.section01 .card{width: 100%;height: 1000px;background: pink;}
+.section01{width: 100%;height: 750px; background:url(../images/ai.png) no-repeat center fixed;
+	background-size: cover; position: relative;}
+.section01 .overlay{width: 100%;height: 100%; position: absolute; top: 0;}
+
+.section02{width: 100%;height: 1000px;background: pink;}
