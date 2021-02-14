@@ -1,6 +1,6 @@
-html,body{height: 100%;}
+html,body{width: 100%;}
 .sticky{position: fixed !important;}
-.menu_wrap{width: 100%; 
+.menu_wrap{width: 100%;; 
   position:fixed;left: 50%; transform: translateX(-50%);
   border-bottom: 1px solid #fff; z-index: 1;}
 .menu_wrap:hover {background: #fff;}
@@ -14,7 +14,7 @@ html,body{height: 100%;}
 .menu_wrap.menu_wrap02 h1 img:nth-child(2){display: block;width: 100%;height: 100%;}
 .menu_wrap ul,.menu_wrap02 ul{float: right; margin-right: 40px;}
 .menu_wrap li,.menu_wrap02 li{float: left; line-height: 50px; padding: 5px 0px; display: none;}
-.menu_wrap li:last-child, .menu_wrap02 li:last-child{display: block;}
+.menu_wrap li:nth-child(7), .menu_wrap02 li:nth-child(7){display: block;}
 .menu_wrap li a,.menu_wrap02 li a{display: block; color: #fff; font-weight: bold; position: relative;}
 .menu_wrap li a:hover,.menu_wrap02 li a:hover {color: #0098c2 !important;}
 .menu_wrap li:hover a:after{content: "";display: block;width: 100%;height: 2px;
@@ -22,6 +22,22 @@ html,body{height: 100%;}
 .menu_wrap.menu_wrap02{position: fixed;z-index: 9999; width: 100%; background: #fff;}
 .menu_wrap.menu_wrap02 li a{color: #000;}
 
+.menu_wrap>ul>li>ul{display: none;}
+.menu_wrap{text-align: center;}
+.menu_txt_hover{font-size: 0.8em; font-weight: bold;}
+.menu_wrap>ul>li>ul>li:first-child{padding-top: 20px;}
+.menu_wrap>ul>li>ul>li{cursor: pointer;}
+
+
+.bugerchange{display: none;}
+.togglemenu{width: 400px; height: 790px; background:#f5f5f5;position: absolute;top: 60px; right: 0; z-index: 9999;
+  text-align: center; line-height: 60px;}
+.togglemenu_wrap_left{width: 30%; float: left; background:#fff; height: 790px; 
+  font-size: 0.9em;}
+.togglemenu_wrap_left:after{content: "";display: block; border-color: transparent transparent transparent #fff; border-style: solid; border-width:13px; position: absolute;}
+.togglemenu_wrap_right{width: 70%; float: right; border-top: 1px solid #000;}
+.togglemenu_wrap li{cursor: pointer;}
+.thistoggle,.thistoggleA{position: absolute;right: 30%; top: 0px;}
 /*slider reset*/
 .slider_wrap .bx-wrapper {
   -moz-box-shadow: none;
@@ -38,8 +54,8 @@ html,body{height: 100%;}
   margin-bottom: 0 !important;
 }
 /*slider*/
-.slider_wrap{height: 1300px; position: relative;}
-.slider li{height: 1300px;width: 100%; overflow: hidden; position: relative;}
+.slider_wrap{height: 850px; position: relative;}
+.slider li{height: 850px;width: 100%; overflow: hidden; position: relative;}
 .slider {position: relative;}
 .slider img{width: 100%;height: 100%;}
 .slider .ani01{animation-name: ani01; animation-duration: 7s; animation-iteration-count: 1;}
@@ -109,11 +125,11 @@ html,body{height: 100%;}
   position: absolute; top: 50%;transform: translateY(-50%); right: -40px;}
 .content_03 .slider2 .content_03_txt{text-align: center; width: 100%;position: absolute; top: 40%; left: 50%;
   transform: translate(-50%,-50%);}
-.content_03 .slider2 .content_03_txt h2{margin-bottom: 15px;}
-.content_03 .slider2 .content_03_txt p{line-height: 25px;}
+.content_03 .slider2 .content_03_txt h2{margin-bottom: 15px; font-size: 1.2em;}
+.content_03 .slider2 .content_03_txt p{line-height: 25px; font-size: 0.8em;}
 .content_03 .slider2 .content_03_right{width: 50%; height: 315px; background: blue; float: right;}
 .content_03 .slider2 .content_03_right img{width: 100%; height: 100%;}
-.content_03 .slider2_icon{position: absolute; bottom: 40px; left: 170px;width: 100px;height: 50px;}
+.content_03 .slider2_icon{position: absolute; bottom: 40px; left: 100px;width: 100px;height: 50px;}
 .content_03 .slider2_icon i{width: 30px;height: 30px; border: 1px solid #000; text-align: center; line-height: 30px;
   border-radius: 30px;}
 .content_03 .slider2_icon .slider2_next{float: right; position: relative; overflow: hidden;}

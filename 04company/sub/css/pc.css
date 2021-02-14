@@ -1,0 +1,60 @@
+.ssection01{height: 600px; position: relative;}
+.ssection01_img{background-image: url(../images/main_img.png); 
+			width: 100%; height: 450px;
+			background-size: cover;}
+.ssection02_img{background-image: url(../images/internet4.png);
+	width: 100%; height: 450px;
+	background-size: cover}
+.ssection03_img{background-image: url(../images/blockchain1.png);
+		width: 100%; height: 450px;
+		background-size: cover}
+.ssection04_img{background-image: url(../images/cloud1.png);
+	width: 100%; height: 450px;
+	background-size: cover}
+.ssection05_img{background-image: url(../images/making1.png);
+		width: 100%; height: 450px;
+		background-size: cover}
+.ssection06_img{background-image: url(../images/distribution1.jpg);
+			width: 100%; height: 450px;
+			background-size: cover}
+.ssection07_img{background-image: url(../images/banking1.png);
+				width: 100%; height: 450px;
+				background-size: cover}
+.ssection08_img{background-image: url(../images/retail1.png);
+					width: 100%; height: 450px;
+					background-size: cover}
+.ssection09_img{background-image: url(../images/healthcare1.png);
+						width: 100%; height: 450px;
+						background-size: cover}
+.ssection10_img{background-image: url(../images/EPC1.png);
+							width: 100%; height: 450px;
+							background-size: cover}
+.ssection01_nav{position: absolute;right: 30px; top: 25px;
+			color: #fff; font-size: 12px; font-weight: bold;}
+.ssection01_nav span:first-child{cursor: pointer;}
+.ssection01_txt{width: 1400px; height: 300px; background: #fff;
+	position: absolute; bottom: 0;}
+.ssection01_txtwrap{position: absolute;top: 50%;left: 50%;
+	transform: translate(-50%,-50%); width: 1320px; margin-left: 350px;}
+.ssection01 h2{font-size: 55px;}
+.ssection01 h3{font-size: 22px;}
+
+
+.ssection02 {width: 100%;height: 480px;background: #f5f5f5;position: relative;}
+.ssection02_txtwrap{width: 1320px;position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.ssection02 h2{font-size: 40px; margin-bottom: 40px;}
+.ssection02 p{font-size: 16px;line-height: 28px; margin-bottom: 30px;}
+.ssection02 span{font-size: 16px; cursor: pointer; color: #0098c2; line-height: 10px;}
+
+.section03_01,.section03_02,.section03_03{height: 875px; width: 1320px; position: relative; ; margin: 0 auto;}
+.section03_01_Wrap p,.section03_02_Wrap p,.section03_03_Wrap p{font-size: 19px; font-weight: bold; margin-bottom: 40px;}
+.section03_01_Wrap h2,.section03_02_Wrap h2,.section03_03_Wrap h2{font-size: 40px;margin-bottom: 50px;}
+.section03_01_Wrap img,.section03_02_Wrap img,.section03_03_Wrap img{width: 870px; height: 490px;}
+.section03_01_Wrap span,.section03_02_Wrap span,.section03_03_Wrap span{display: block;position: absolute; top: 180px; right: 150px;font-size: 10vw; color: #f2f2f2;}
+.section03_02_Wrap span,.section03_03_Wrap span {top: 100px;}
+.section03_01_Wrap,.section03_02_Wrap,.section03_03_Wrap{position: absolute;top: 50%;transform: translateY(-50%); left: 0; width: 100%;}
+.section03_01_Wrap02,.section03_02_Wrap02,.section03_03_Wrap02{width: 870px;height: 330px;background: #fff; position: absolute; bottom: 0;right: 0px;}
+.section03_01_Wrap02 h3,.section03_02_Wrap02 h3,.section03_03_Wrap02 h3{font-size: 19px; margin-bottom: 25px;}
+.section03_01_Wrap02 h2,.section03_02_Wrap02 h2,.section03_03_Wrap02 h2{font-size: 22px; margin-bottom: 20px;}
+.section03_01_Wrap02 p,.section03_02_Wrap02 p,.section03_03_Wrap02 p{font-size: 16px; line-height: 25px;font-weight: bold;}
+.section03_01_txt,.section03_02_txt,.section03_03_txt{position: absolute;right: 0px;top: 50%;transform: translateY(-50%);}

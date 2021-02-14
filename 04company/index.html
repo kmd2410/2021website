@@ -113,25 +113,159 @@
 		}); // icon
 	});
 	
+	
+	$(function(){
+			$(".menu_txt>li").hover(function(){
+				$(this).find(".menu_txt_hover").show();
+			},function(){
+				$(this).find(".menu_txt_hover").hide();
+			});
+			$(".togglemenu").hide();
+			$(".thistoggle").hide();
+			$(".togglemenu_wrap_right_li").hide();
+			$(".buger").click(
+				function(){
+					$(this).hide();
+					$(".bugerchange").show();
+					$(".togglemenu").fadeIn();
+					$(".menu_wrap").addClass("menu_wrap02");
+					
+				}
+			);
+			$(".bugerchange").click(
+				function(){
+					$(this).hide();
+					$(".buger").show();
+					$(".togglemenu").hide();
+					$(".menu_wrap").removeClass("menu_wrap02");
+				}
+			);
+			$(".togglemenu_wrap_left>li").click(
+				function(){
+					$(".thistoggle").hide();
+					$(this).find(".thistoggle").show();
+					$(".thistoggleA").hide();
+				}
+			);
+			$(".togglemenu_wrap_left>li").click(function(){
+					$(".togglemenu_wrap_left>li:first-child").addClass("cblue");
+					$(".togglemenu_wrap_left>li").removeClass("cblue");
+					$(this).addClass("cblue");
+			});
+		});
 </script>
+<style>
+	.cblue{color: #0098c2; font-weight: bold;}
+	.thistoggle li{color: #000;}
+	.thistoggleA li{color: #000;}
+</style>
 <body>
 	<header id="header">
 		<div class="menu_wrap clearfix">
 			<h1>
-				<a href="#">
+				<a href="./">
 					<img src="images/logo_white.svg" alt="logo_white" class="logo_white">
 					<img src="images/logo_black.svg" alt="" class="logo_black">
 				</a>
 			</h1>
 			<ul class="menu_txt clearfix">
-				<li><a href="#">오퍼링</a></li>
-				<li><a href="#">업종</a></li>
-				<li><a href="#">라이브러리</a></li>
-				<li><a href="#">뉴스룸</a></li>
-				<li><a href="#">회사정보</a></li>
-				<li><a href="#">My Trial</a></li>
-				<li><a href="#"><i class="fas fa-bars"></i></a></li>
+				<li><a href="#">오퍼링</a>
+					<ul class="menu_txt_hover">
+						<li><a href="sub/offering/ai_analytics.html">인공지능</a></li>
+						<li><a href="sub/offering/internet.html">사물인터넷</a></li>
+						<li><a href="sub/offering/blockchain.html">블록체인</a></li>
+						<li><a href="sub/offering/cloude.html">클라우드</a></li>
+					</ul>
+				</li>
+				<li><a href="#">업종</a>
+					<ul class="menu_txt_hover">
+						<li><a href="sub/business/making.html">제조</a></li>
+						<li><a href="sub/business/distribution.html">물류</a></li>
+						<li><a href="sub/business/banking.html">금융</a></li>
+						<li><a href="sub/business/retail.html">리테일</a></li>
+						<li><a href="sub/business/healthcare.html">헬스케어</a></li>
+						<li><a href="sub/business/EPC.html">EPC</a></li>
+					</ul>
+				</li>
+				<li><a href="#">라이브러리</a>
+					<ul class="menu_txt_hover">
+						<li>인사이트 리포트</li>
+						<li>리소스</li>
+						<li>고객사례</li>
+					</ul>
+				</li>
+				<li><a href="#">뉴스룸</a>
+					<ul class="menu_txt_hover">
+						<li>언론보도</li>
+						<li>이슈와 팩트</li>
+						<li>삼성SDS 스토리</li>
+					</ul>
+				</li>
+				<li><a href="#">회사정보</a>
+					<ul class="menu_txt_hover">
+						<li>회사소개</li>
+						<li>투자정보</li>
+						<li>지속가능경영</li>
+					</ul>
+				</li>
+				<li><a href="login.html">My Trial</a></li>
+				<li class="buger"><a href="#"><i class="fas fa-bars"></i></a></li>
+				<li class="bugerchange"><a href="#"><i class="fas fa-times"></i></a></li>
 			</ul>
+		</div>
+		
+		<div class="togglemenu">
+			<div class="togglemenu_wrap clearfix">
+				<ul class="togglemenu_wrap_left">
+					<li class="cblue">오퍼링
+						<ul class="thistoggleA">
+							<li><a href="sub/offering/ai_analytics.html">인공지능</a></li>
+							<li><a href="sub/offering/internet.html">사물인터넷</a></li>
+							<li><a href="sub/offering/blockchain.html">블록체인</a></li>
+							<li><a href="sub/offering/cloude.html">클라우드</a></li>
+						</ul>
+						<ul class="thistoggle">
+							<li><a href="sub/offering/ai_analytics.html">인공지능</a></li>
+							<li><a href="sub/offering/internet.html">사물인터넷</a></li>
+							<li><a href="sub/offering/blockchain.html">블록체인</a></li>
+							<li><a href="sub/offering/cloude.html">클라우드</a></li>
+						</ul>
+					</li>
+					<li class="toggle02" style="cursor: pointer;">업종
+						<ul class="thistoggle">
+							<li><a href="sub/business/making.html">제조</a></li>
+							<li><a href="sub/business/distribution.html">물류</a></li>
+							<li><a href="sub/business/banking.html">금융</a></li>
+							<li><a href="sub/business/retail.html">리테일</a></li>
+							<li><a href="sub/business/healthcare.html">헬스케어</a></li>
+							<li><a href="sub/business/EPC.html">EPC</a></li>
+						</ul>
+					</li>
+					<li>라이브러리
+						<ul class="thistoggle">
+							<li>인사이트 리포트</li>
+							<li>리소스</li>
+							<li>고객사례</li>
+						</ul>
+					</li>
+					<li>뉴스룸
+						<ul class="thistoggle">
+							<li>언론보도</li>
+							<li>이슈와 팩트</li>
+							<li>삼성SDS 스토리</li>
+						</ul>
+					</li>
+					<li>회사정보
+						<ul class="thistoggle">
+							<li>회사소개</li>
+							<li>투자정보</li>
+							<li>지속가능경영</li>
+						</ul>
+					</li>
+					<li><a href="./login.html">My Trial ></a></li>
+					<li>문의하기 ></li>
+				</ul>
+			</div>
 		</div>
 		<div class="slider_wrap">
 			<ul class="slider">
@@ -483,5 +617,4 @@
 	// 	}}
 	// }// javascript 연습필요
 	</script>
-	
 </html>
