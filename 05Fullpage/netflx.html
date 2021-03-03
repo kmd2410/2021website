@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script>
+        $(function(){
+            $(".fullpage").fullpage();
+            $(".slider").slick({
+                infinite: true,
+                slidesToShow: 3, //How many for show
+                slidesToScroll: 1, //How many for next
+                arrows:true, //next,prev button
+                autoplay:false,
+                autoplaySpeed: 2000,
+                dots: false, //pager
+                centerMode: true,
+                centerPadding: '0',
+                draggable:false,
+                prevArrow:".slick_prev",
+                nextArrow:".slick_next"
+                // variableWidth:true,
+                // adaptiveHeight:true
+            });
+            $(".youtube_video").colorbox({
+                iframe:true,
+				innerWidth:560,
+				innerHeight:315
+            });
+        });
+    </script>
+    <style>
+        .navbar-brand { width: 100px; height: 50px;}
+        /* .win { width: 100%; top: -480px; height: 949px; left: 0;
+            background-size: 100% 100%; object-fit: cover;
+            background-position: center center;} */
+        .home .video { height: 100%; top: -65px; object-fit: cover;}
+        .navbar_wrap { background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));}
+        .nav-item a { color: #fff !important;}
+        .navbar-nav li:hover {border-bottom: 2px solid #000;}
+        .section { overflow: hidden;}
+
+        .character { background: skyblue;}
+        .slick-slide { opacity: 0.3;}
+        .slick-current{ transform: scale(1.2); opacity: 1;}
+        
+        .aboutimage img { height: 400px; width: 300px;}
+        .aboutimage2 img {width: 297px; height: 168px;}
+        .abouttxt {line-height: 30px; padding-top: 30px;}
+        .about { background-image: url(images/bg.jpg); background-size: cover;
+            background-repeat: no-repeat; background-position: center;}
+        .character { background-image: url(images/bg.jpg); background-size: cover;
+            background-repeat: no-repeat; background-position: center;}
+
+        .button { top: 0; left: 45%; top: 40%; font-size: 3em; color: white; opacity: 0.8;}
+        .button:hover { transform: scale(1.2); opacity: 1;}
+        
+        .slick_prev { top: 50%; left:18%;z-index: 9999; color: black;
+            transform: translateY(-50%); font-size: 3em; opacity: 0.5; cursor: pointer;}
+        .slick_prev:hover { opacity: 1;}
+        .slick_next { top: 50%; right:18%;z-index: 9999; color: black;
+            transform: translateY(-50%); font-size: 3em; opacity: 0.5; cursor: pointer;}
+        .slick_next:hover { opacity: 1;}
+        
+    </style>
+</head>
+<body>
+    <div class="fixed-top navbar_wrap">
+        <div class="container pl-0 pr-0">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbarshadow"></div>
+                <a href="netflx.html" class="navbar-brand">
+                    <img src="images/netflixtxt.png" alt="logo" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" data-menuanchor="m1st">
+                            <a href="#m1st" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item" data-menuanchor="m2st">
+                            <a href="#m2st" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item" data-menuanchor="m3st">
+                            <a href="#m3st" class="nav-link">Character</a>
+                        </li>
+                        <li class="nav-item" data-menuanchor="m4st">
+                            <a href="#m4st" class="nav-link">Community</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="fullpage">
+        
+        <div class="section home" data-anchor="m1st">
+            <div class="position-relative video">
+                <video src="video/win.mp4" autoplay muted loop  data-autoplay class="win position-absolute"></video>
+            </div>
+        </div>
+
+        
+        <div class="section about" data-anchor="m2st">
+            <div class="container">
+                <p class="text-center font-weight-bold mb-5" style="font-size: 1.5em;">About</p>
+                <div class="row mb-5">
+                    <div class="col-4 aboutimage">
+                        <img src="images/main.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-8 abouttxt">
+                        <p class="text-dark font-weight-bold">개요 <span class="text-white ml-2">SF | 한국</span></p>
+                        <p class="text-dark font-weight-bold">출시일 <span class="text-white ml-2">2021.02.05</span></p>
+                        <p class="text-white">
+                            2092년, 지구는 병들고 우주 위성궤도에 인류의 새로운 보금자리인 UTS가 만들어졌다.<br>돈 되는 일이라면, 뭐든 하는 조종사 ‘태호’(송중기) 과거, 우주 해적단을 이끌었던<br>‘장선장’(김태리) 갱단 두목이었지만 이제는 기관사가 된 ‘타이거 박’(진선규) 평생 이루고 싶은 꿈을 가진 작살잡이 로봇 ‘업동이’(유해진). 이들은 우주쓰레기를 주워 돈을 버는 청소선 ‘승리호’의 선원들이다.<br>“오지 마! 쳐다보지도 말고, 숨도 조심해서 쉬어. 엉겨 붙을 생각하지 마!” 어느날, 사고 우주정을<br>수거한 ‘승리호’는 그 안에 숨어있던 대량살상무기로 알려진 인간형 로봇 ‘도로시’를 발견한다.<br>돈이 절실한 선원들은 ‘도로시’를 거액의 돈과 맞바꾸기 위한 위험한 거래를 계획하는데…<br>“비켜라, 이 무능한 것들아. 저건 내 거다!”
+                        </p>
+                    </div>
+                </div>
+                <ul class="row aboutimage2 text-center">
+                    <li class="col-4 position-relative">
+                        <p class="font-weight-bold">스폐셜 예고편</p>
+                        <img src="images/about1.jpg" alt="">
+                        <a class="button position-absolute youtube_video text-white" href="https://www.youtube.com/embed/a_clqz2yMwY">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </li>
+                    <li class="col-4">
+                        <p class="font-weight-bold">제작가 영상</p>
+                        <img src="images/about2.jpg" alt="">
+                        <a class="button position-absolute youtube_video text-white" href="https://www.youtube.com/embed/bFhw3xA8OBo">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </li>
+                    <li class="col-4">
+                        <p class="font-weight-bold">메인 예고편</p>
+                        <img src="images/about3.jpg" alt="">
+                        <a class="button position-absolute youtube_video text-white" href="https://www.youtube.com/embed/N2Evva6aLC8">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="section character position-relative" data-anchor="m3st">
+            <div class="container character_wrap position-absolute" style="top: 100px;">
+                <p class="text-center font-weight-bold mb-5" style="font-size: 1.5em;">Character</p>
+                <div class="slider text-white">
+                    <li>
+                        <img src="images/character1.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">송중기<span class="">/김태호역</span></h4>
+                            <p class="card-text">승리호의 조종사이자 뺀질거리고 돈을 밝히는 태호는 원래는 UTS의 고급 인재였다.<br><br>지구로부터 온 불법 이민자들을 처리하는 일을 하다가 우연히 갓난아기를 입양하게 되고 180도 다른 인생을 살게된다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/character2.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">김태리 <span class="">/장선장(장현숙)역</span></h4>
+                            <p class="card-text">승리호의 선장으로 파란만장한 인생을 살아온 사회 생활 짬밥 만렙이다.<br><br>여유만만하면서도 냉철한 성격으로 분위기에 휩쓸리지 않고 똑똑하다. 술을 좋아하고 성격이 불같은 면이 있다.<br><br>태호와 마찬가지로 UTS 공학부문 인재였기에 다양한 장비들을 개발했다. 설리반을 암살하기위해 노력하지만 늘 계획이 실패한다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/character3.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">진선규 <span class="">/타이거박역</span></h4>
+                            <p class="card-text">승리호의 기관사로 지구에서 마약밀매 갱단을 하다가 사형을 선고받고 우주로 망명한 인물이다.<br><br>그래핀 티타늄 도끼를 주무기로 사용하며 온몸이 문신으로 덮여있지만 마음만은 따듯하다.<br><br>훗날 꽃님이의 가장 든든한 삼촌이 되어준다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/character4.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">유해진 <span class="">/업동이역</span></h4>
+                            <p class="card-text">승리호의 선원으로 인공지능 로봇이다. 장선장이 데려와서 만들고, 고쳐서 장선장과 가장 친하다.<br><br>로봇이지만 TMI 폭발하는 수다쟁이에 LED사인으로 감정을 표현해 사람보다 더 사람같다.<br><br>피부이식이 평생의 목표이며 훗날 피부이식이 너무 성공해서 전혀 다른 인물이 된다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/character5.jpg" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">박예린 <span class="">/도로시(강꽃님)역</span></h4>
+                            <p class="card-text">처음에는 인간의 외형을 가진 수소폭탄 탑재 로봇 도로시로 소개되지만 사실은 나노봇이 투여된 인간이다.<br><br>능력이 매우 강력하여 승리호 수호에있어 큰 도움을 준다.<br><br>따듯하고 밝고 사랑스러운 캐릭터.
+                            </p>
+                        </div>
+                    </li>
+                    
+                </div>
+                
+                
+            </div>
+            <div class="slick_prev position-absolute text-white">
+                <i class="fas fa-chevron-circle-left"></i>
+            </div>
+            <div class="slick_next position-absolute text-white">
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="m4st">
+
+        </div>
+
+        
+    </div>
+    <style>
+        
+        .slider li {padding: 50px; outline: none;}
+        .card-body h4 { font-size: 1.1em;}
+        .card-body p { font-size: 0.7em;}
+
+        .character_wrap { top: 20%; left: 50%; transform: translateX(-50%);}
+        
+    </style>
+    
+
+</body>
+</html>

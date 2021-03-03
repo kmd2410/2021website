@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+:root{
+    --primary-color:#02b3e4;
+    --secondary-color:#ff5483;
+    --third-color:#a951ed;
+}
+
+#headerWrap .bgcolor{ width: 100%; height: 660px; background: linear-gradient(160deg,#02ccba 0%,#aa7ecd 100%); position: absolute; transform:skew(0deg,-15deg); left: 0; top: -275px;}
+
+#headerWrap .video video { object-fit: fill; width: 100%; border-radius: 5px;
+    box-shadow: 10px 10px 25px rgb(46,61,73);}
