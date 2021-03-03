@@ -6,3 +6,4 @@ my website markup
 2. college https://kmd2410.github.io/2021website/02college
 3. travel https://kmd2410.github.io/2021website/03travel
 4. company https://kmd2410.github.io/2021website/04company
+5. fullpage https://kmd2410.github.io/2021website/05Fullpage/netflx.html
