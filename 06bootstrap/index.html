@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+        $(function(){
+            var hero_s = $(".slider-items");
+            hero_s.owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                items: 1,
+                dots: false,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+                smartSpeed: 1200,
+                autoHeight: false,
+                autoplay: false,
+                onInitialized: function () {
+                    var a = this.items().length;
+                    $("#snh-1").html("<span>1</span><span>" + a + "</span>");
+                }
+            });
+
+            //set slider background 
+            $('.set-bg').each(function () {
+                var bg = $(this).data('setbg');
+                $(this).css('background-image', 'url(' + bg + ')');
+            });
+        });
+    </script>
+    <style>
+        .set-bg { background-repeat: no-repeat; background-size: cover; background-position: top center;}
+        
+        .slider-items .owl-item.active .single-slider-item .slider-text h4,
+        .slider-items .owl-item.active .single-slider-item .slider-text h1,
+        .slider-items .owl-item.active .single-slider-item .slider-text .slider-btn {
+            top: 0; opacity: 1; }
+
+        .slider-items .owl-item.active .single-slider-item .slider-text h4 {
+        transition: all 0.5s ease 0.2s;}
+        .slider-items .owl-item.active .single-slider-item .slider-text h1 {
+        transition: all 0.4s ease 0.4s;}
+        .slider-items .owl-item.active .single-slider-item .slider-text .slider-btn {
+        transition: all 0.6s ease 0.6s;}
+
+        .slider-items .owl-nav button[type=button] {
+        position: absolute; left: 65px; top: 50%;
+        transform: translateY(-24px); line-height: 20px; font-size: 50px; color: #ffffff;}
+        .slider-items .owl-nav button[type=button].owl-next { left: auto; right: 65px;}
+
+        .single-slider-item { height: 950px; padding-top: 358px;}
+        .single-slider-item .slider-text { text-align: center;}
+        .single-slider-item .slider-text h4 {
+        color: #ffffff; letter-spacing: 4px; margin-bottom: 36px;
+        position: relative; top: 50px; opacity: 0;}
+        .single-slider-item .slider-text h1 { color: #ffffff; font-size: 110px; font-weight: 700;
+            letter-spacing: 22px; margin-bottom: 64px; 
+            position: relative; top: 50px; opacity: 0;}
+        .single-slider-item .slider-text .slider-btn { position: relative; top: 100px; opacity: 0;}
+        
+        /* next,prev */
+        .slider-items .owl-nav button[type=button] { left: 100px;}
+        .slider-items .owl-nav button[type=button].owl-next { right: 100px;}
+
+        .slider-btn { display: inline-block; font-size: 14px; padding: 12px 39px; 
+            background: white; line-height: normal; letter-spacing: 2px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="./" class="navbar-brand">
+                <i class="fas fa-dumbbell"> Fitness</i>
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">메인 홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">회사소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">시간표</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">강의내용</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">트레이너</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <section class="slider-section">
+        <div class="slider-items owl-carousel">
+            <div class="single-slider-item set-bg" data-setbg="img/slider-bg-1.jpg">
+                <div class="container">
+                    <div class="slider-text">
+                        <h4>헬스,PT,기구필라테스</h4>
+                        <h1>건강한 몸<span class="text-primary"> 만들기</span></h1>
+                        <a href="#" class="slider-btn">바로가기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider-item set-bg" data-setbg="img/slider-bg-2.jpg">
+                <div class="container">
+                    <div class="slider-text">
+                        <h4>헬스,PT,기구필라테스</h4>
+                        <h1>건강한 몸<span class="text-primary"> 만들기</span></h1>
+                        <a href="#" class="slider-btn">바로가기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider-item set-bg" data-setbg="img/slider-bg-3.jpg">
+                <div class="container">
+                    <div class="slider-text">
+                        <h4>헬스,PT,기구필라테스</h4>
+                        <h1>건강한 몸<span class="text-primary"> 만들기</span></h1>
+                        <a href="#" class="slider-btn">바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .program li { width: 50%; background: pink; padding: 30px;}
+    </style>
+    <div class="container program">
+        <div class="row">
+            <div class="col-8">
+                <p>프로그램</p>
+                <ul>
+                    <li>
+                        <img src="img/icon-1.png" alt="" class="mb-3">
+                        <h4>웨이트</h4>
+                        <p></p>
+                    </li>
+                    <li><img src="img/icon-1.png" alt=""></li>
+                    <li><img src="img/icon-1.png" alt=""></li>
+                    <li><img src="img/icon-1.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+</html>
