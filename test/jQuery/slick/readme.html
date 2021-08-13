@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(function(){
+            $(".slider").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots:true
+            });
+            $(".play").on("click", function(){
+                $(".slider").slick("slickPlay");
+            });
+            $(".pause").on("click", function(){
+                $(".slider").slick("slickPause");
+            });
+
+            $('.slider2').slick({
+                infinite: true,
+                slidesToShow: 3, //How many for show
+                slidesToScroll: 1, //How many for next
+                arrows:true, //next,prev button
+                autoplay:true,
+                autoplaySpeed: 2000,
+                dots: true, //pager
+                centerMode: true,
+                centerPadding: '0',
+                prevArrow:".slick-prev",
+                nextArrow:".slick-next",
+                
+                });
+            
+        });
+    </script>
+    <style>
+        .slider {position: relative;}
+        .slider button {position: absolute; z-index: 1; top: 50%; transform: translateY(-50%);}
+        .slider button.slick-prev {left: 0;}
+        .slider button.slick-next {right: 0;}
+        .slider img {width: 100%; height: 800px;}
+        .slider .bg1 .txt1 {opacity: 0;transform: translateX(-50px); transition: all .5s .5s;}
+        .slider .bg1 p {text-align: center; font-size: 60px;}
+        .slider .bg1.slick-active .txt1 {opacity: 1; transform: translateX(0);}
+        .bg1 {background: url(../04company/images/slider01.jpg) no-repeat center / cover; height: 800px;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="bg1">
+            <p class="txt1">Lorem ipsum dolor sit amet.</p>
+            <p class="txt2">Lorem ipsum dolor sit amet.</p>
+            <p class="txt3">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div><img src="../04company/images/slider01.jpg" alt="">2</div>
+        <div><img src="../04company/images/slider01.jpg" alt="">3</div>
+        <div><img src="../04company/images/slider01.jpg" alt="">4</div>
+    </div>
+    <button class="play">시작</button>
+    <button class="pause">정지</button>
+
+    <style>
+        .slider2 {display: flex;}
+        .slider2 .items {width: 350px; height: 350px; margin: 50px; position: relative;}
+        .slider2 .items .overlay{position: absolute; top: 0; left: 0; width: 350px; height: 250px;
+            background: rgba(0,0,0,0.5); top: 50px; left: 50px;}
+        .slider2 .items img {width: 350px; height: 250px; margin: 50px;
+            transition: all linear .4s;}
+        .slider2 .slick-center img {transform: scale(1.2);}
+        .slider2 .slick-center .overlay {opacity: 0;}
+        
+    </style>
+    <div class="slider2">
+        <div class="items" title="slide1">
+            <img src="../04company/images/123.jpg" alt="">1
+            <div class="overlay"></div>
+        </div>
+        <div class="items">
+            <img src="../04company/images/123.jpg" alt="">2
+            <div class="overlay"></div>
+        </div>
+        <div class="items">
+            <img src="../04company/images/123.jpg" alt="">3
+            <div class="overlay"></div>
+        </div>
+        <div class="items">
+            <img src="../04company/images/123.jpg" alt="">4
+            <div class="overlay"></div>
+        </div>
+        <div class="items">
+            <img src="../04company/images/123.jpg" alt="">5
+            <div class="overlay"></div>
+        </div>
+        <div class="items">
+            <img src="../04company/images/123.jpg" alt="">6
+            <div class="overlay"></div>
+        </div>
+        
+    </div>
+    <button type="button" class="slick-prev">prev</button>
+    <button type="button" class="slick-next">next</button>
+</body>
+</html>

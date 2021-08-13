@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+    <script src="./jQuery/bxSlider/js/jquery-3.1.1.min.js"></script>
+
+    <style>
+        @media screen and (max-width:556px){
+        body { width: 100%; position: relative; }
+        .background { position: absolute; top: -20px; left: 0; z-index: -99999;}
+        .background img { width: 100%;}
+        .header { position: relative; width: 100%; }
+        .logo img{ width: 200px; display: block; margin: 0 auto; margin-top: 15px;}
+        .bar { color: white; font-size: 1.3em; position: absolute; right: 25px; top: 15px; cursor: pointer;}
+
+        .point { width: 90%; height: 190px; background: rgba(166, 136, 98);
+            margin: 0 auto; border-radius: 10px; margin-top: 30px; padding: 30px; color: white;}
+        .point>h4 { margin-top: 20px;}
+        
+        .point li { float: left; text-align: center; padding: 20px 16px;}
+        .point li>h4 { font-size: 1.2em;}
+        
+        .content { width: 90%; margin: 0 auto;}
+        .content li { float: left; width: 30%; padding: 20px 50px;}
+        .content li a { text-align: center; }
+        .content li a:hover { color: rgba(166, 136, 98); font-weight: bold; 
+            border-bottom: 2px solid rgba(166, 136, 98);}
+        .contentat { color: rgba(166, 136, 98) !important; font-weight: bold; 
+            border-bottom: 2px solid rgba(166, 136, 98);}
+
+        
+        .content_01 { width: 100%; background: white; margin: 0 auto; border-radius: 10px; 
+            overflow: hidden; height: 170px; margin-top: 20px; box-shadow: 5px 5px 10px rgb(46,61,73);}
+        .content_01txt {width: 50%; float: left; padding: 35px 30px;}
+        .content_01txt h4 {font-size: 1.3em;}
+        .content_01txt p { padding-top: 30px;}
+        .content_01img {width: 50%; float: right;}
+        .content_01img img{ width: 100%;}
+        .content_bg { width: 100%; background: white; height: 1000px; border-radius: 30px; position: absolute; top: 340px; z-index: -111111;}
+
+        .ml { display: none;}
+        /* .content_01 {display: none;} */
+        /* .notice {display: none;} */
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $(".m1").trigger("click");
+
+            $(".m1").click(function(){
+                $(".menulist").hide()
+                $(".menulist02").hide()
+                $(".content_01").show()
+                $(".notice").show()
+                $(".m1 a").addClass("contentat")
+                $(".m2 a").removeClass("contentat")
+                $(".m3 a").removeClass("contentat")
+            })
+
+            $(".m2").click(function(){
+                $(".menulist").show()
+                $(".menulist02").hide()
+                $(".content_01").hide()
+                $(".notice").hide()   
+                $(".m2 a").addClass("contentat")
+                $(".m3 a").removeClass("contentat")
+                $(".m1 a").removeClass("contentat")          
+            })
+
+            $(".m3").click(function(){
+                $(".menulist").hide()
+                $(".content_01").hide()
+                $(".menulist02").show()
+                $(".notice").hide()
+                $(".m3 a").addClass("contentat")
+                $(".m2 a").removeClass("contentat")          
+                $(".m1 a").removeClass("contentat")          
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="background">
+        <img src="./images/back1.png" alt="">
+    </div>
+    <div class="header">
+        <div class="logo">
+            <a href="">
+                <img src="./images/loginlogo.png" alt="">
+            </a>
+        </div>
+        <div class="buger">
+            <i class="fas fa-bars bar"></i>
+        </div>
+    </div>
+    <div class="point">
+        <p>유가을님 안녕하세요!</p>
+        <h4>오늘은 8,000 P 보유하고 있어요.</h4>
+        <ul class="clearfix">
+            <li>
+                <h4>104</h4>
+                <p>회원</p>
+            </li>
+            <li>
+                <h4>Gold</h4>
+                <p>GRADE</p>
+            </li>
+            <li>
+                <h4>Point</h4>
+                <p>포인트 충전</p>
+            </li>
+            <li>
+                <h4>sns</h4>
+                <p>친구초대</p>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="content">
+        <ul class="clearfix">
+            <li class="m1">
+                <a href="#">Premium</a>
+            </li>
+            <li class="m2">
+                <a href="#">Membership</a>
+            </li>
+            <li class="m3">
+                <a href="#">Service</a>
+            </li>
+        </ul>
+
+        <div class="content_01 clearfix">
+            <div class="content_01txt">
+                <h4>렌탈 & 쉐어링</h4>
+                <p>렌탈 후 쉐어링으로<br>부가수익을 창출하세요!</p>
+            </div>
+            <div class="content_01img">
+                <img src="./images/preminum1.png" alt="">
+            </div>
+        </div>
+
+        <div class="content_01 clearfix">
+            <div class="content_01txt">
+                <h4>프리미엄 풀빌라</h4>
+                <p>매순간이 추억으로<br>기억되는 프리미엄 공간</p>
+            </div>
+            <div class="content_01img">
+                <img src="./images/preminum2.png" alt="">
+            </div>
+        </div>
+
+        <div class="content_01 clearfix" style="margin-bottom: 30px;">
+            <div class="content_01txt">
+                <h4>고급형 실버타운</h4>
+                <p>건강한 미래를 위한<br>쾌적하고 편안한 휴식처</p>
+            </div>
+            <div class="content_01img">
+                <img src="./images/preminum3.png" alt="">
+            </div>
+        </div>
+
+        <style>
+            .notice { width: 90%; margin: 0 auto; box-shadow: 5px 5px 10px rgb(46,61,73); height: 100%; border-radius: 5px;
+                overflow: hidden; margin-bottom: 70px;}
+            .notice_01 { background: rgba(166, 136, 98); padding: 10px; position: relative;}
+            .notice_01 img { width: 25px; height: 25px;}
+            .notice_01 span {position: absolute; top: 25%;left: 45px; color: white;}
+            .notice_02 { background: pink; height: 80px;}
+            .notice_02 p { text-align: center; line-height: 80px; background: white;}
+        </style>
+        <div class="notice">
+            <div class="notice_01">
+                <img src="./images/notice.png" alt="">
+                <span>Notice</span>
+            </div>
+            <div class="notice_02">
+                <p>2021 사장님 플랫폼 프리미엄 서비스 오픈예정</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .ml { margin-bottom: 20px;}
+        .ml li { float: left; width: 25%; text-align: center; padding: 15px;
+            cursor: pointer;}
+    </style>
+
+    <div class="ml menulist">
+        <ul class="clearfix">
+            <li>
+                <img src="./images/mem1.png" alt="">
+                <p>렌터카</p>
+            </li>
+            <li>
+                <img src="./images/mem2.png" alt="">
+                <p>세무회계</p>
+            </li>
+            <li>
+                <img src="./images/mem3.png" alt="">
+                <p>보험</p>
+            </li>
+            <li>
+                <img src="./images/mem4.png" alt="">
+                <p>휴대폰</p>
+            </li>
+            <li>
+                <img src="./images/mem5.png" alt="">
+                <p>생활법률</p>
+            </li>
+            <li>
+                <img src="./images/mem6.png" alt="">
+                <p>loT/TV</p>
+            </li>
+            <li>
+                <img src="./images/mem7.png" alt="">
+                <p>라이프/일상</p>
+            </li>
+            <li>
+                <img src="./images/mem8.png" alt="">
+                <p>건강/헬스</p>
+            </li>
+            <li>
+                <img src="./images/mem9.png" alt="">
+                <p>인터넷</p>
+            </li>
+            <li>
+                <img src="./images/mem10.png" alt="">
+                <p>보안</p>
+            </li>
+            <li>
+                <img src="./images/mem11.png" alt="">
+                <p>상조</p>
+            </li>
+            <li>
+                <img src="./images/mem12.png" alt="">
+                <p>QR단말기</p>
+            </li>
+            <li>
+                <img src="./images/mem13.png" alt="">
+                <p>명품관</p>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="ml menulist02">
+        <ul class="clearfix">
+            <li>
+                <img src="./images/service1.png" alt="">
+                <p>해외여행</p>
+            </li>
+            <li>
+                <img src="./images/service2.png" alt="">
+                <p>숙박&여행</p>
+            </li>
+            <li>
+                <img src="./images/service3.png" alt="">
+                <p>레저</p>
+            </li>
+            <li>
+                <img src="./images/service4.png" alt="">
+                <p>제주골프</p>
+            </li>
+            <li>
+                <img src="./images/service5.png" alt="">
+                <p>의료</p>
+            </li>
+            <li>
+                <img src="./images/service6.png" alt="">
+                <p>렌탈</p>
+            </li>
+            <li>
+                <img src="./images/service7.png" alt="">
+                <p>사진</p>
+            </li>
+            <li>
+                <img src="./images/service8.png" alt="">
+                <p>이사</p>
+            </li>
+            <li>
+                <img src="./images/service9.png" alt="">
+                <p>상품권</p>
+            </li>
+            <li>
+                <img src="./images/service10.png" alt="">
+                <p>다이렉트</p>
+            </li>
+            <li>
+                <img src="./images/service11.png" alt="">
+                <p>쇼핑</p>
+            </li>
+            <li>
+                <img src="./images/service12.png" alt="">
+                <p>통신</p>
+            </li>
+            
+            
+        </ul>
+    </div>
+
+    <style>
+        .nav { width: 100%; box-shadow: 5px 5px 10px rgb(46,61,73); text-align: center; line-height: 50px;
+            }
+        .nav li { float: left; width: 44%; box-shadow: 5px 5px 10px rgb(46,61,73);
+            height: 50px;}
+        .nav li:last-child { width: 12%; background: rgba(166, 136, 98);}
+        .nav li:last-child img { width: 30px; padding-top: 10px;}
+        .nav a { color: rgba(166, 136, 98); position: relative;}
+    </style>
+    <div class="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="">Menu</a>
+            </li>
+            <li>
+                <a href="">My page</a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./images/logout.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		// $(document).ready(function(){}); 문서 준비
+		$(document).ready(function(){
+			//$(".class").bxSlider(); bxSlider 실행 {}안에 옵션추가
+			$(".class").bxSlider({
+				auto:true //슬라이드 자동
+				controls:true //슬라이드 화살표 버튼 출력
+				pager:true //슬라이드 갯수 표시 출력
+				mode:vertical //아래로 슬라이드 !== horizontal:오른쪽으로 슬라이드
+				pagerCustom:".class" //슬라이드 번호 버튼 내가 만든걸로 적용 data-slide-index="0"
+			});
+			$(".slider2_next").click(function(){
+				mySlider2.goToNextSlide();//next
+			});
+			$(".slider2_prev").click(function(){
+				mySlider2.goToPrevSlide();//prev
+			});
+		});
+	</script>
+	<style>
+		.sliderWrap .bx-wrapper {
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: 0 none;
+			margin-bottom: 0;
+		}
+		.sliderWrap .bx-wrapper .bx-pager{
+			bottom: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>data-slide-index="0"</h1>
+</body>
+</html>

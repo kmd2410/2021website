@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        @media screen and (max-width:556px){
+
+        body { width: 100%; background: url(./images/login.jpg);
+        background-repeat: no-repeat; background-size: cover;}
+        .logo {width: 150px; height: 150px; display: block; margin: 0 auto; margin-top: 150px;}
+        .txt { color: white; text-align: center; line-height: 30px; margin-top: 50px;}
+        .fieldset input {display: block; margin: 0 auto; width: 80%; height: 50px; border-radius: 10px; margin-top: 20px;
+            text-align: center;}
+        .fieldset .submit { background: #000; color: white;}
+        
+        .menu ul { width: 80%; margin: 0 auto;}
+        .menu li { float: left; position: relative; width: 33%; text-align: center; margin-top: 30px;}
+        .menu li:after { content: ""; position: absolute; width: 1px; height: 20px; background: white;
+            top: 3px; right: 0;}
+        .menu li:last-child:after { display: none;}
+        .menu li a { color: white; padding: 5px; font-size: 0.9em;}
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/logoo.png" alt="" class="logo">
+    
+    <div class="txt">
+        <p>불황을 이기는 가장 확실한 비법</p>
+        <p>경제적 자유와 인생의 가치를 위해 도전하세요!</p>
+    </div>
+    
+    <div class="fieldset">
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="Password">
+        <input type="submit" value="Log-in" class="submit">
+    </div>
+    <div class="menu">
+        <ul class="clearfix">
+            <li>
+                <a href="">아이디 찾기</a>
+            </li>
+            <li>
+                <a href="">비밀번호 재설정</a>
+            </li>
+            <li>
+                <a href="">회원가입</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

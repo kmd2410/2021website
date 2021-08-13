@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./jQuery/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"> -->
+    <script src="./jQuery/jquery-3.1.1.min.js"></script>
+    <!-- <script src="./jQuery/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script> -->
+
+    <style>
+        /* body { position: relative;} */
+
+        .square.on .l1,.square.on .l2,.square.on .l3,.square.on .l4 { 
+            position: absolute; background: 0 0; width: 0; height: 0; animation-duration: .4s; animation-iteration-count: 1;
+            animation-timing-function: ease-in-out; animation-fill-mode: forwards;
+        }
+
+        .square.on .l1 { width: 15px; animation-name: square-l1; animation-delay: .4s; right: 0; bottom: 270px;}
+        .square.on .l2 { height: 3.575%; animation-name: square-l2; animation-delay: .8s; top: 0; right: 2%;}
+        .square.on .l3 { width: 15px; animation-name: square-l3; animation-delay: 1.2s; left: 0; top: 15px;}
+        .square.on .l4 { height: 3.575%;; animation-name: square-l4; animation-delay: 1.6s; bottom: 0; left: 2%;}
+
+        @keyframes square-l1 { 
+            0%{height: 0; background: #ccc;} 100%{ height: 150px; background: #ccc;}
+        }
+        @keyframes square-l2 { 
+            0%{width: 0; background: #ccc;} 100%{ width: 98%; background: #ccc;}
+        }
+        @keyframes square-l3 { 
+            0%{height: 0; background: #ccc;} 100%{ height: 96.425%; background: #ccc;}
+        }
+        @keyframes square-l4 { 
+            0%{width: 0; background: #ccc;} 100%{ width: 98%; background: #ccc;}
+        }
+
+        .square_wrap { width: 640px; height: 420px; position: relative;}
+    </style>
+</head>
+<body>
+    <style>
+        .header_wrap { position:fixed; width: 100%; background: white; border-bottom: 1px solid #ccc;}
+        .header { display: flex; justify-content: space-between; padding: 30px 0; width: 90%; margin: 0 auto; 
+            align-items: center; text-align: center;}
+        .header>ul>li { float: left; padding: 0 30px; font-size: 1.14em; font-weight: bold; background: white;}
+        
+        .header span { border: 1px solid #00a88e; padding: 5px 10px; border-radius: 5px;}
+        .header span>a { color: #00a88e;}
+        .header select { padding: 5px 10px; border-radius: 5px; padding-top: 10px; border: 1px solid #ccc;}
+        .submenu { position: absolute; top: 120%; display: none; }
+        .submenu li { padding: 10px 0; }
+        .submenu li a { font-weight: normal; font-size: 0.85em;}
+        
+        
+        .menu:hover .submenu { display: block;  z-index: 1; }
+        .menu>li>a:hover { color: #00a88e;}
+        
+        
+        .submenu_bg { width: 100%; background: white; height: 0px; position: absolute; top: 101%; transition: .3s;}
+
+        .msubmenu { display: none;}
+
+        .buger { display: none;}
+        @media screen and (max-width: 1400px){
+            .menu>li,.header span { display: none;}
+            .buger { display: block !important; float: right; margin-left: 10px;}
+            .header { padding: 15px 0;}
+            .header span { border: 1px solid #ccc;}
+            .bugerX { display: none;}
+            .space { height: 73px !important;}
+            .slider1 img { }
+
+            .msubmenu { display: block;}
+
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $(".menu").hover(function(){$(".submenu_bg").css("height","300px")},function(){$(".submenu_bg").css("height","0")})
+
+            $(".bugerBar").click(function(){
+                $(".bugerX").show();
+                $(".bugerBar").hide();
+            })
+
+            $(".bugerX").click(function(){
+                $(".bugerBar").show();
+                $(".bugerX").hide();
+            })
+
+            $(".slider").owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 400,
+                mouseDrag:false,
+                animateOut: 'fadeOut'
+            });
+        })
+
+    </script>
+
+    <div class="header_wrap">
+        <div class="header">
+            <h1><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+            <ul class="clearfix menu">
+                <li><a href="#">회사소개</a>
+                    <ul class="submenu">
+                        <li><a href="#">CEO인사말</a></li>
+                        <li><a href="#">비전</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">조직구성</a></li>
+                        <li><a href="#">연구개발</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업소개</a>
+                    <ul class="submenu">
+                        <li><a href="#">토목</a></li>
+                        <li><a href="#">건축</a></li>
+                        <li><a href="#">주택</a></li>
+                        <li><a href="#">플랜트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">투자정보</a>
+                    <ul class="submenu">
+                        <li><a href="#">주식정보</a></li>
+                        <li><a href="#">경영정보</a></li>
+                        <li><a href="#">재무정보</a></li>
+                        <li><a href="#">전자공시</a></li>
+                        <li><a href="#">회사공고</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">지속가능경영</a>
+                    <ul class="submenu">
+                        <li><a href="#">안전보건경영</a></li>
+                        <li><a href="#">품질경영</a></li>
+                        <li><a href="#">환경경영</a></li>
+                        <li><a href="#">윤리경영</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보센터</a>
+                    <ul class="submenu">
+                        <li><a href="#">홍보소식</a></li>
+                        <li><a href="#">CI/BI소개</a></li>
+                        <li><a href="#">수상실적</a></li>
+                        <li><a href="#">홍보자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">인재채용</a></li>
+            </ul>
+            <div>
+                <span><a href="#">센트레빌</a></span>
+                <span><a href="#">동부건설채용</a></span>
+                <select name="" id="">
+                    <option value="">KOR</option>
+                    <option value="">ENG</option>
+                </select>
+                <span class="buger"><i class="fas fa-bars bugerBar"></i><i class="fas fa-times bugerX"></i></span>
+            </div>
+        </div>
+
+        <div class="submenu_bg"></div>
+    </div>
+
+
+    <div class="space" style="height: 100px;"></div>
+
+    <style>
+        .msubmenu_w { width: 100%; height: 100vh; background: white;}
+        .msubmenu_w ul { width: 100%; border-bottom: 1px solid #000;}
+        .msubmenu_w li { padding: 0px; float: left; padding: 20px;}
+        .msubmenu_w li:first-child { padding-left: 40px;}
+        .msubmenu_w li:last-child { float: right;}
+    </style>
+    <div class="msubmenu_w">
+        <div class="msubmenu">
+            <ul class="clearfix">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">b</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        
+        .slider1 img { width: 100%; transform: scale(1); height: 80vh;}
+    </style>
+    <div class="slider_wrap">
+        <div class="slider">
+            <div class="slider1">
+                <img src="./images/slider1.jpg" alt="">
+                <div class="txt">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <style>
+        .just { width: 100%; height: 2000px;}
+    </style>
+    <div class="just"></div>
+
+    <div class="square_wrap">
+        <div class="square ani">
+            <span class="l1"></span>
+            <span class="l2"></span>
+            <span class="l3"></span>
+            <span class="l4"></span>
+        </div>
+    </div>
+</body>
+
+<script>
+    var $window = $(window);
+    var $ani_elements = $('.ani');
+
+    function check_ani() {
+        var window_height = $window.innerHeight(); //안쪽높이
+        var window_top_position = $window.scrollTop(); //스크롤 위치
+        var window_bottom_position = (window_top_position + window_height); //안쪽높이 + 스크롤위치
+        $ani_elements.each(function () {
+            var $element = $(this);
+            var element_height = $element.outerHeight(); //인터넷 높이
+            var element_top_position = $element.offset().top; //현재위치
+            var element_bottom_position = (element_top_position + element_height); //스크롤위치 + 인터넷높이
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                $element.addClass('on');
+                setTimeout(function(){
+                    $element.parents('.txt').addClass('on');
+                },2000);
+            } else {
+                //$element.removeClass('ani_view');
+            };
+        });
+    };
+    $window.on('load scroll', function () {
+        check_ani();
+    });
+
+    
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init(); //wow 실행문
+
+		//태그에 직접 class로 적용 ex) wow 효과
+		//태그 옆에 옵션 적용가능
+		//<div class="wow 효과" date-wow-delay="1s">
+		//date-wow-delay="1s" 1초 딜레이
+		//date-wow-iteration="infinite" 무한반복:횟수지정가능
+		//date-wow-duration="1s" 1초 작동
+		//date-wow-offset="10" ?
+	</script>
+	<style>
+		.box{animation-name: ani; /*애니메이션 이름*/
+			animation-duration: 1s; /*시간*/
+			animation-fill-mode: forwards; /*종료시점*/
+			animation-iteration-count: infinite; /*반복*/
+			animation-direction: alternate; /*방향*/ /*reverse*/
+			animation-delay:1s; /*지연시간*/
+			animation-timing-function: ease;} /*애니메이션모양*/}
+		@keyframes .box{
+			from{} to{}}
+	</style>
+</head>
+<body>
+	<div class="box wow bounce"></div>
+</body>
+</html>

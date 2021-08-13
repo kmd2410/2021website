@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./jQuery/slick/js/jquery-3.1.1.min.js"></script>
+</head>
+<style>
+    @media screen and (max-width:556px){
+    body { width: 100%; height: 100%; background-color: rgba(125, 153, 154);}
+    .header { position: relative; width: 100%; height: 100px; padding-top: 20px;}
+    .logo { position: absolute; left: 10px; padding: 10px; width: 130px; cursor: pointer;}
+    .buger { position: absolute; right: 10px; padding: 10px; width: 40px; cursor: pointer;}
+
+    .note { width: 90%; background: white; margin: 0 auto; border-radius: 10px; background-color: rgba(143,164,165); color: white; text-align: center; box-shadow: 5px 5px 10px rgb(46,61,73);}
+    .note_img { float: left; padding: 10px 0px 10px 20px;}
+    .note span { padding: 5px; line-height: 60px;}
+
+    .menu_wrap { width: 90%; position: relative; height: 100px; margin: 0 auto;}
+    .menu {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+    .menu li { float: left;text-align: center; padding: 20px; width: 25%; height: 30px; line-height: 30px;}
+    .menu li a { color: rgba(95, 123, 124, 1); font-weight: bold;}
+    .menu li:first-child a { background-color:rgba(136,167,162); border-radius: 14px; display: block; width: 50px; text-align: center; color: white;}
+
+
+    .content_01 { width: 90%; background: white; margin: 0 auto; border-radius: 10px; overflow: hidden; height: 170px; margin-top: 20px; box-shadow: 5px 5px 10px rgb(46,61,73);}
+    .content_01txt {width: 50%; float: left; padding: 30px 20px;}
+    .content_01txt h4 {font-size: 1.3em;}
+    .content_01txt p { padding-top: 30px;}
+    .content_01img {width: 50%; float: right;}
+    .content_01img img{ width: 100%;}
+    .content_bg { width: 100%; background: white; height: 600px; border-radius: 30px; position: absolute; top: 340px; z-index: -111111;}
+    }
+    
+</style>
+<body>
+    <div style="position: relative;">
+        <div class="header">
+            <img src="./images/logo.png" alt="" class="logo">
+            <img src="./images/menu.png" alt="" class="buger">
+        </div>
+
+        <div class="note clearfix">
+            <div class="note_img">
+                <img src="./images/notice.png" alt="">
+            </div>
+            <span>공지사항</span>
+            <span>2021 가토플랫폼 서비스 오픈예정</span>
+        </div>
+
+        <div class="menu_wrap">
+            <ul class="clearfix menu">
+                <li>
+                    <a href="">홈</a>
+                </li>
+                <li>
+                    <a href="">프리미엄</a>
+                </li><li>
+                    <a href="">쇼핑</a>
+                </li><li>
+                    <a href="">멤버쉽</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="content_01 clearfix">
+                <div class="content_01txt">
+                    <h4>렌탈 & 쉐어링</h4>
+                    <p>렌탈 후 쉐어링으로<br>부가수익을 창출하세요!</p>
+                </div>
+                <div class="content_01img">
+                    <img src="./images/preminum1.png" alt="">
+                </div>
+            </div>
+
+            <div class="content_01 clearfix">
+                <div class="content_01txt">
+                    <h4>프리미엄 풀빌라</h4>
+                    <p>매순간이 추억으로<br>기억되는 프리미엄 공간</p>
+                </div>
+                <div class="content_01img">
+                    <img src="./images/preminum2.png" alt="">
+                </div>
+            </div>
+
+            <div class="content_01 clearfix">
+                <div class="content_01txt">
+                    <h4>고급형 실버타운</h4>
+                    <p>건강한 미래를 위한<br>쾌적하고 편안한 휴식처</p>
+                </div>
+                <div class="content_01img">
+                    <img src="./images/preminum1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="content_bg"></div>
+    </div>
+</body>
+</html>

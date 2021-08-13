@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./jQuery/slick/css/slick.css">
+    <link rel="stylesheet" href="./jQuery/bxSlider/css/jquery.bxslider.css">
+    <script src="./jQuery/slick/js/jquery-3.1.1.min.js"></script>
+    <script src="./jQuery/slick/js/slick.min.js"></script>
+    <script src="./jQuery/bxSlider/js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            $(".slider").slick({
+                infinite: true,
+                slidesToShow: 3, //How many for show
+                slidesToScroll: 1, //How many for next
+                arrows:false, //next,prev button
+                autoplay:true,
+                autoplaySpeed: 2000,
+                dots: false, //pager
+                centerMode: true,
+                centerPadding: '0',
+                
+                
+            });
+        })
+
+        $(function(){
+            $(".slider02").bxSlider({
+                auto:true,
+                pager:false,
+                controls:true
+            })
+        })
+    </script>
+    <style>
+        @media screen and (max-width:556px){
+
+        body { width: 100%;}
+        .header { width: 100%; height: 220px; 
+            background: linear-gradient(to top right,green,black); position: relative;}
+        .header .logo { margin: 0 auto; display: block; padding: 20px; width: 150px; cursor: pointer;}
+
+        .header_img {background: blue; width: 70%; margin: 0 auto; overflow: hidden;
+            border-radius: 10px;}
+        .header_img img { width: 100%; height: 230px; display: block;}
+
+        .slider_wrap {position: absolute; top: 90px;left: 0; width: 100%;}
+        .slider .items {width: 100%;height: 100%; border-radius: 20px;}
+        .slider .items img{ margin: 0 auto; background: rgba(0,0,0,0); width: 160px; height: 180px}
+        .slick-slide { opacity: 0.5;}
+        .slick-current{ transform: scale(1.2); opacity: 1;}
+        
+        .slider02_wrap>p { margin-top: 130px; text-align: center; color: rgba(7,108,59);
+            font-weight: bold;}
+            
+        .slider02 ul { width: 100%;}
+        .slider02 li{ float: left; width: 35%; height: 120px;
+            border-radius: 6px; line-height: 30px; padding: 15px; 
+            background: rgba(242,242,242); margin: 30px 0; margin-left: 55px;}
+        .slider02 h4 { font-size: 1.3em; color: rgba(0,92,161);}
+        .slider02 p { font-size: 0.9em;}
+        
+        .content>p { text-align: center; color: rgba(7,108,59); font-weight: bold; margin-top: 50px;}
+        .content li { float: left; width: 25%; margin-top: 20px}
+        .content li a { width: 100px; height: 100px;
+            background: rgba(254, 241, 225,0.8); display: block; border-radius: 50%; line-height: 100px; text-align: center;
+            margin: 0 auto; box-shadow: 3px 5px 10px rgb(46,61,73);}
+
+        .bx-wrapper{
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: 0 none;
+			background: #fff;
+			margin-bottom: 0;
+		}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="./images/logo.png" alt="" class="logo">
+
+        <div class="slider_wrap">
+            <div class="slider">
+                <div class="items">
+                    <img src="./images/preminum1.png" alt="">
+                </div>
+                <div class="items">
+                    <img src="./images/preminum2.png" alt="">
+                </div>
+                <div class="items">
+                    <img src="./images/preminum1.png" alt="">
+                </div>
+                <div class="items">
+                    <img src="./images/preminum2.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="slider02_wrap">
+        <p>Premium service +</p>
+
+        <div class="slider02">
+            <ul class="clearfix">
+                <li>
+                    <h4>풀빌라</h4>
+                    <p>건강한 여가생활을<br>완벽하게!</p>
+                </li>
+                <li>
+                    <h4>실버타운</h4>
+                    <p>안락한 노후생활을<br>누리세요!</p>
+                </li>
+            </ul>
+
+            <ul class="clearfix">
+                <li>
+                    <h4>풀빌라</h4>
+                    <p>건강한 여가생활을<br>완벽하게!</p>
+                </li>
+                <li>
+                    <h4>실버타운</h4>
+                    <p>안락한 노후생활을<br>누리세요!</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>Special +</p>
+        <ul class="clearfix">
+            <li>
+                <a href="">자동차</a>
+            </li>
+            <li>
+                <a href="">대리운전</a>
+            </li><li>
+                <a href="">카쉐어링</a>
+            </li><li>
+                <a href="">매장관리</a>
+            </li><li>
+                <a href="">세무</a>
+            </li><li>
+                <a href="">보험</a>
+            </li><li>
+                <a href="">법률</a>
+            </li
+            ><li>
+                <a href="">라이프</a>
+            </li>
+        </ul>
+
+        
+    </div>
+
+    <style>
+        .menu  { width: 100%; background: rgba(65, 33, 10); margin-top: 50px;}
+        .menu li { float: left; width: 25%; text-align: center; position: relative; padding: 15px;}
+        .menu li:after {content: ""; display: block; width: 1px; height: 70%; background:rgba(169, 159, 154);
+            position: absolute; top: 8px; right: 0;}
+        .menu li:last-child:after {display: none;}
+        .menu li a:active { color: white;}
+        .menu li a {color: rgba(169, 159, 154);}
+    </style>
+    <div class="menu">
+        <ul class="clearfix">
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Mypage</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Menu</a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
